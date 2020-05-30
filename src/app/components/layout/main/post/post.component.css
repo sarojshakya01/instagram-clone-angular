@@ -1,0 +1,45 @@
+a,
+a:visited {
+  color: #00376b;
+  color: rgba(var(--fe0, 0, 55, 107), 1);
+  text-decoration: none;
+}
+
+.igpost-container {
+  flex-direction: column;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.igpost {
+  padding: 0;
+  margin-bottom: 60px;
+  border-radius: 3px;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  background-color: rgba(var(--d87, 255, 255, 255), 1);
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.footer-igpost {
+  top: 50%;
+  /* margin-top: 40px; */
+  /* height: 48px; */
+}
+
+.footer-igpost-inner {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  box-sizing: border-box;
+}

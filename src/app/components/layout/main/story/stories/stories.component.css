@@ -1,0 +1,103 @@
+.story {
+  animation: story-tray-item-appear 0.3s ease-out;
+  left: 0;
+  position: absolute;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  height: 122px;
+  padding: 0 4px;
+  width: 80px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.story-btn {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 0;
+  padding-top: 0;
+  text-align: center;
+  width: 64px;
+}
+
+.story-btn-inner {
+  margin-bottom: 8px;
+  margin-top: 4px;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: block;
+  -webkit-box-flex: 0;
+  flex: none;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+canvas {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 66px;
+  height: 66px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.canvas-span {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: block;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.canvas-span img {
+  height: 100%;
+  width: 100%;
+}
+
+.canvas-span img::after {
+  border: 1px solid rgba(var(--jb7, 0, 0, 0), 0.0975);
+  border-radius: 50%;
+  bottom: 0;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.story-label {
+  color: rgba(var(--i1d, 38, 38, 38), 1);
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+  max-width: 64px;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  text-overflow: ellipsis;
+  top: 68px;
+  white-space: nowrap;
+}
+
+.story-loader {
+  align-items: center;
+  top: 30%;
+}

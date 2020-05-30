@@ -1,0 +1,22 @@
+.stories {
+  height: 82px;
+  overflow-y: hidden;
+  outline: 0;
+}
+
+.story-inner {
+  width: auto;
+  overflow: auto hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 120px;
+}
+
+.story-inner-inner {
+  flex-direction: row;
+  padding-left: 0px;
+  padding-right: 480px;
+}

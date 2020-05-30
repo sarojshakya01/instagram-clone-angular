@@ -1,0 +1,26 @@
+<section class="add-comment">
+  <div>
+    <form>
+      <div *ngIf="!fetched" class="add-comment-loader">
+        <img alt="Loader" src="/assets/img/loader.gif" />
+      </div>
+
+      <textarea
+        placeholder="Add a comment…"
+        autoComplete="off"
+        autoCorrect="off"
+        (change)="onChangeInput()"
+        value="value"
+        onKeyDown="handlePostComment()"
+        ng-disabled="true"
+      ></textarea>
+      <button
+        disabled="btnDisabled"
+        type="button"
+        (click)="handlePostCommentBtn()"
+      >
+        {{ "Post" }}
+      </button>
+    </form>
+  </div>
+</section>

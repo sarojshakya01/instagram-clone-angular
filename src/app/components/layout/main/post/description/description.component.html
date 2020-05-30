@@ -1,0 +1,137 @@
+<div class="igpost-description">
+  <section class="igpost-direct">
+    <span class="igpost-direct-action like">
+      <button (click)="clickLikePost()">
+        <svg height="24" viewBox="0 0 48 48" width="24">
+          <path
+            clipRule="evenodd"
+            [attr.d]="likeIcon.white"
+            fillRule="evenodd"
+          ></path>
+        </svg>
+      </button>
+    </span>
+    <span class="igpost-direct-action comment">
+      <button (click)="clickComment()">
+        <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+          <path
+            clipRule="evenodd"
+            [attr.d]="commentIcon"
+            fillRule="evenodd"
+          ></path>
+        </svg>
+      </button>
+    </span>
+    <button class="igpost-direct-action share" (click)="clickShare()">
+      <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+        <path [attr.d]="shareIcon"></path>
+      </svg>
+    </button>
+    <span class="igpost-direct-action bookmark">
+      <button (click)="clickBookmark()">
+        <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+          <path [attr.d]="bookmarkIcon.white"></path>
+        </svg>
+      </button>
+    </span>
+  </section>
+  <section *ngIf="postDetails.likes.length > 0" class="like-count">
+    <div class="like-count-inner">
+      <div class="like-count-content">
+        <button type="button">
+          <span>{{ postDetails.likes.length }}</span>
+          <span *ngIf="postDetails.likes.length > 1"> likes </span>
+          <span *ngIf="postDetails.likes.length === 1"> like </span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="caption-comment">
+    <div *ngIf="postDetails.caption.length > 0" class="caption">
+      <div class="caption-inner">
+        <a
+          class="caption-by"
+          title="{{ postDetails.postBy }}"
+          href="/caption.captionBy/"
+        >
+          {{ postDetails.postBy }} </a
+        >{{ " " }}
+        <span class="caption-content">
+          <span>{{ postDetails.caption }}</span>
+        </span>
+      </div>
+    </div>
+
+    <div
+      *ngFor="let comment of postDetails.comments; let i = index"
+      [attr.d]="comment.commentId"
+      class="comment"
+    >
+      <div class="comment-inner">
+        <a
+          class="comment-id"
+          title="{{ comment.commentBy }}"
+          href="/{{ comment.commentBy }}/"
+        >
+          {{ comment.commentBy }} </a
+        >{{ " " }}
+        <span class="comment-content">
+          <span>
+            <a
+              *ngIf="comment.mention.length > 0"
+              a
+              href="/{{ comment.mention }}/"
+              >{{ "@" + comment.mention }}</a
+            >
+            {{ " " }}
+            {{ comment.comment }}
+          </span>
+        </span>
+      </div>
+      <div *ngIf="comment.likes.length > 0" class="comment-like-count">
+        {{ comment.likes.length }}
+      </div>
+      <span class="comment-like-span">
+        <div class="comment-like">
+          <button type="button" (click)="clickLikeComment()">
+            <svg height="12" viewBox="0 0 48 48" width="12">
+              <path
+                clipRule="evenodd"
+                [attr.d]="likeIcon.white"
+                fillRule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </span>
+      <span
+        *ngIf="
+          postDetails.postBy === postDetails.loginUser ||
+          comment.commentBy === postDetails.loginUser
+        "
+        class="comment-delete-span"
+      >
+        <div class="comment-delete">
+          <button type="button" (click)="clickDeleteComment()">
+            <svg height="24" viewBox="0 0 24 24" width="24">
+              <path
+                clipRule="evenodd"
+                [attr.d]="deleteIcon"
+                fillRule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </span>
+    </div>
+  </div>
+
+  <div class="igpost-time">
+    <a href="/time/">
+      <time dateTime="{{ postDetails.postTime }}" title="title">
+        {{ "2 hours ago" }}
+      </time>
+    </a>
+  </div>
+  <app-add-comment></app-add-comment>
+</div>

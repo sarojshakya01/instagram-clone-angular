@@ -1,0 +1,24 @@
+<div class="profile-container">
+  <div class="profile">
+    <div
+      class="profile-photo"
+      role="button"
+      tabIndex="0"
+      (click)="clickProfile()"
+    >
+      <canvas height="60" width="60"></canvas>
+      <a href="/{{ profileInfo.userId }}/">
+        <img
+          alt="{{ profileInfo.userId }}'s Profile pic"
+          src="{{ profileInfo.profilePhoto }}"
+        />
+      </a>
+    </div>
+    <div class="profile-label">
+      <div class="profile-id" (click)="clickProfile()">
+        <a href="/{{ profileInfo.userId }}/">{{ profileInfo.userId }}</a>
+      </div>
+      <div class="profile-name">{{ profileInfo.userName }}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.a {
+  position: relative;
+}
+
+.inbox-notif {
+  right: -8px;
+  top: -6px;
+  position: absolute;
+}
+
+.inbox-notif-inner {
+  background-color: #ed4956;
+  background-color: rgba(var(--c37, 237, 73, 86), 1);
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 100px;
+  color: #fff;
+  color: rgba(var(--de5, 255, 255, 255), 1);
+  font-size: 11px;
+  height: 18px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  min-width: 18px;
+}
+
+.msg-cnt {
+  padding: 0 3px;
+}
+
+.direct-after {
+  left: 50%;
+  top: 48px;
+  transform: translateX(-50%);
+  transition: top 0.2s ease-in-out;
+}

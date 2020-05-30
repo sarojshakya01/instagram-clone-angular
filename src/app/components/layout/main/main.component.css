@@ -1,0 +1,94 @@
+.main-section {
+  padding-top: 30px;
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 640px) {
+  .main-section-2 {
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: 640px) {
+  .main-section-2 {
+    padding-top: 60px;
+  }
+}
+
+.main-section-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  max-width: 935px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 640px) {
+  .main-section-2 {
+    padding-top: 30px;
+  }
+}
+/* @media (min-width: 640px) {
+    .main-section-2 {
+      padding-top: 60px;
+    }
+  } */
+
+.fileInput {
+  display: none;
+}
+
+.post-story-gap {
+  height: 0;
+  max-width: 293px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.story-top.story-container {
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  border-radius: 3px;
+  margin-bottom: 24px;
+  background: rgba(var(--b3f, 250, 250, 250), 1);
+  border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  display: block;
+  overflow-y: hidden;
+  padding: 10px 0;
+}
+
+app-sidepanel {
+  position: fixed;
+  height: 100vh;
+  margin-bottom: 30px;
+  padding: 0;
+  max-width: 293px;
+  right: 0;
+  width: 100%;
+  margin-left: -4px;
+}
+
+.main-section-2 .igpost-outer {
+  float: left;
+  margin-right: 28px;
+  max-width: 614px;
+  width: 100%;
+}

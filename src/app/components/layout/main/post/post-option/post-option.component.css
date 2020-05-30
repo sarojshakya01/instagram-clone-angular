@@ -1,0 +1,33 @@
+.igpost-option {
+  height: 60px;
+  top: 0;
+  bottom: 0;
+  right: 4px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.igpost-option button {
+  -webkit-box-align: center;
+  align-items: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.igpost-option-dot {
+  height: 24px;
+  width: 24px;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  align-content: stretch;
+}

@@ -1,0 +1,11 @@
+.activity a {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.activity-after {
+  margin-left: -423px;
+  top: 15px;
+}

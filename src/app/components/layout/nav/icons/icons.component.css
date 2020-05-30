@@ -1,0 +1,19 @@
+.nav-icons-inner {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-left: 24px;
+  white-space: nowrap;
+}
+
+svg {
+  fill: rgb(38, 38, 38);
+  display: block;
+  position: relative;
+}
+
+.nav-icon:not(:first-child) {
+  margin-left: 22px;
+}

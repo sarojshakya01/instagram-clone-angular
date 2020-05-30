@@ -1,0 +1,23 @@
+.nav-brand-link {
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.nav-brand-logo {
+  margin-top: 7px;
+  transition: opacity 0.1s ease-out;
+}
+
+.nav-brand-logo img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}

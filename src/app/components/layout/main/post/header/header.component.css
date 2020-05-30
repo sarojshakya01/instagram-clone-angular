@@ -1,0 +1,127 @@
+header {
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  height: 60px;
+  padding: 16px;
+  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid rgba(var(--ce3, 239, 239, 239), 1);
+}
+
+.igpost-postby-photo {
+  -webkit-box-align: center;
+  align-items: center;
+  align-self: center;
+  display: block;
+  -webkit-box-flex: 0;
+  flex: none;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.igpost-postby-photo canvas {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 42px;
+  height: 42px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.igpost-postby-photo a {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: block;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.igpost-postby-photo a img {
+  height: 100%;
+  width: 100%;
+}
+
+.igpost-postby-photo a img::after {
+  border: 1px solid rgba(var(--jb7, 0, 0, 0), 0.0975);
+  border-radius: 50%;
+  bottom: 0;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.igpost-postby-label {
+  margin-left: 16px;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  display: flex;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+}
+
+.igpost-postby-userid {
+  max-width: 220px;
+}
+
+.igpost-postby-name-content {
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.igpost-postby-name-content a {
+  border: 0;
+  display: inline;
+  padding: 0;
+  position: relative;
+  background-color: transparent;
+  user-select: auto;
+  -webkit-appearance: none;
+  background: 0 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  text-transform: inherit;
+  text-overflow: ellipsis;
+}
+
+.igpost-postby-location {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.igpost-postby-location a {
+  max-width: 100%;
+  color: #8e8e8e;
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  line-height: 15px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

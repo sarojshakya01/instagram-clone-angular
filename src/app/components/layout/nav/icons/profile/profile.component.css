@@ -1,0 +1,31 @@
+a {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: block;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.nav-profile-container {
+  border: 1px solid #262626;
+  border: 1px solid rgba(var(--i1d, 38, 38, 38), 1);
+  border-radius: 50%;
+  height: 28px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 28px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}

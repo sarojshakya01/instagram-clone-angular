@@ -1,0 +1,33 @@
+<div>
+  <input
+    id="nav-search-input"
+    class="nav-search-input"
+    type="text"
+    autoCapitalize="none"
+    placeholder="Search"
+    (blur)="onBlurInput()"
+  />
+  <span *ngIf="clickInput" class="nav-search-icon-left"></span>
+  <div
+    *ngIf="clickInput && dataFetched"
+    class="nav-search-clear-icon"
+    role="button"
+    tabIndex="0"
+    onClick="{this.handleBlur}"
+  ></div>
+  <div *ngIf="clickInput && !dataFetched" class="nav-search-loader">
+    <img alt="loader" src="/assets/img/loader.gif" />
+  </div>
+  <div
+    *ngIf="!clickInput"
+    class="nav-search-container"
+    role="button"
+    tabIndex="0"
+    (click)="onClickInput()"
+  >
+    <div class="nav-search-container-inner">
+      <span class="nav-search-icon"></span>
+      <span class="nav-search-label">Search</span>
+    </div>
+  </div>
+</div>

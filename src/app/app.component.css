@@ -1,0 +1,63 @@
+app-nav {
+  -webkit-box-ordinal-group: 1;
+  order: 0;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  padding: 0;
+  flex-basis: 55px;
+}
+
+app-main {
+  background-color: #fafafa;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+app-footer {
+  -webkit-box-ordinal-group: 6;
+  order: 5;
+  padding: 0 20px;
+  background-color: #fafafa;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+}
+.slide-arrow {
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  justify-self: center;
+  outline: 0;
+  padding: 16px 8px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.slide-arrow-left {
+  left: 0;
+}
+
+.slide-arrow-right {
+  right: 0;
+}
+
+.slide-arrow-icon {
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-image: url(/assets/img/bundle.png);
+}
+
+.slide-arrow-icon-right {
+  background-position: -258px -319px;
+}
+
+.slide-arrow-icon-left {
+  background-position: -226px -319px;
+}

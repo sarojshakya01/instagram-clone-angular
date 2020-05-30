@@ -1,1 +1,147 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  color: rgba(var(--i1d, 38, 38, 38), 1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+html,
+body,
+app-root {
+  height: 100%;
+}
+
+body {
+  background: rgba(var(--d87, 255, 255, 255), 1);
+  overflow-y: scroll;
+  margin: 0px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+app-root,
+article,
+div,
+footer,
+header,
+main,
+nav,
+section {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border: 0 solid #000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  line-height: 18px;
+}
+
+.root-inner {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.dark,
+.dark .nav-search-container,
+.dark .nav-search,
+.dark .nav-search-input,
+.dark .search-result-container {
+  background-color: #222 !important;
+  color: #e6e6e6 !important;
+  border-color: #e6e6e6 !important;
+}
+
+.dark svg {
+  fill: #e6e6e6;
+}
+
+.dark div.story-user-id span,
+.dark div.suggestion-user-id-content,
+.dark div.story-label,
+.dark .like-count-content button,
+.dark .search-result-userid,
+.dark.profile-page,
+.dark.profile-page .profile-setting h2,
+.dark.profile-page .profile-setting a > button,
+.dark.profile-page header section ul > li > span > span,
+.dark.profile-page header section ul > li > span,
+.dark.profile-page header section ul > li > a > span,
+.dark .intro,
+.dark a {
+  color: #e6e6e6 !important;
+  border-color: #e6e6e6 !important;
+}
+
+.footer .dark .language span {
+  color: #3a8fe0;
+}
+
+.dark .add-comment button {
+  color: #abb3b9;
+}
+
+.dark .add-comment textarea {
+  color: white;
+}
+
+div,
+img,
+span,
+button {
+  outline: none;
+}
+
+.dark .nav-profile-container {
+  border: 1px solid #ce8d8d;
+}
+
+.dark .search-result-container::after {
+  border-color: transparent transparent #000 transparent;
+}
+
+a,
+a:visited {
+  color: #00376b;
+  color: rgba(var(--fe0, 0, 55, 107), 1);
+  text-decoration: none;
+}
