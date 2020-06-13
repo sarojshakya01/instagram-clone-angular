@@ -27,6 +27,7 @@ export class DirectComponent implements OnInit {
   ngOnChanges(): void {
     if (this.clickMe) {
       this.icon = directIcon.black;
+      this.inbox = 0;
     } else {
       this.icon = directIcon.white;
     }
