@@ -1,0 +1,11 @@
+<section *ngIf="likes.length > 0" class="like-count">
+  <div class="like-count-inner">
+    <div class="like-count-content">
+      <button type="button">
+        <span>{{ likes.length }}</span>
+        <span *ngIf="likes.length > 1"> likes </span>
+        <span *ngIf="likes.length === 1"> like </span>
+      </button>
+    </div>
+  </div>
+</section>

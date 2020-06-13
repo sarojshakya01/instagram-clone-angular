@@ -1,0 +1,56 @@
+/* icon bar css */
+.igpost-direct {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: -34px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  height: 40px;
+}
+
+.igpost-direct .like {
+  animation-duration: 0.45s;
+  animation-name: like-button-animation;
+  animation-timing-function: ease-in-out;
+  transform: scale(1);
+  display: inline-block;
+  margin-left: -8px;
+}
+
+.igpost-direct-action button {
+  -webkit-box-align: center;
+  align-items: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.igpost-direct-action svg {
+  display: block;
+  position: relative;
+  height: 24px;
+  width: 24px;
+}
+
+.share {
+  -webkit-box-align: center;
+  align-items: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.bookmark {
+  margin-left: auto;
+  margin-right: -10px;
+  display: inline-block;
+}

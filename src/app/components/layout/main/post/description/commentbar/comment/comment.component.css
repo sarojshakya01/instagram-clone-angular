@@ -1,0 +1,115 @@
+.comment {
+  margin-bottom: 4px;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.comment-inner {
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  display: block;
+}
+
+.comment-id {
+  color: #262626;
+  color: rgba(var(--i1d, 38, 38, 38), 1);
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 5px;
+  margin-left: -5px;
+}
+
+.comment-content {
+  overflow-wrap: break-word;
+}
+
+.comment-like-count {
+  display: block;
+  max-width: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+  margin-right: 5px;
+  margin-top: -1px;
+  color: #9e8f8f;
+}
+
+.comment-like {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  line-height: inherit;
+  outline: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.comment-like-span {
+  max-width: 12px;
+  height: 12px;
+}
+
+.comment-like button {
+  padding: 0;
+  -webkit-box-align: center;
+  align-items: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.comment-like svg {
+  display: block;
+  position: relative;
+  fill: rgb(142, 142, 142);
+  height: 12px;
+  width: 12px;
+}
+
+.comment-delete-span {
+  max-width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+.comment-delete button {
+  padding: 0;
+  -webkit-box-align: center;
+  align-items: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.comment-delete svg {
+  display: block;
+  position: relative;
+  fill: rgb(142, 142, 142);
+  height: 15px;
+  width: 15px;
+}

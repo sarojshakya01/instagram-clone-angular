@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 const directIcon = {
   white:
@@ -13,13 +13,22 @@ const directIcon = {
   styleUrls: ['../icons.component.css', './direct.component.css'],
 })
 export class DirectComponent implements OnInit {
-  inbox: number;
+  @Input() inbox;
+  @Input() clickMe;
+
   icon: string;
 
   constructor() {
-    this.inbox = 2;
     this.icon = directIcon.white;
   }
 
   ngOnInit(): void {}
+
+  ngOnChanges(): void {
+    if (this.clickMe) {
+      this.icon = directIcon.black;
+    } else {
+      this.icon = directIcon.white;
+    }
+  }
 }

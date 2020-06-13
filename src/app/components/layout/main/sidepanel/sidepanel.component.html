@@ -1,5 +1,8 @@
 <div class="side-panel">
-  <app-side-profile [profileInfo]="profileInfo"></app-side-profile>
+  <app-side-profile
+    [profileInfo]="profileInfo"
+    (setClickProfileEvent)="setClickProfile()"
+  ></app-side-profile>
   <app-side-story></app-side-story>
   <app-suggestion></app-suggestion>
 

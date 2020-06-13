@@ -19,6 +19,5 @@ export class SearchComponent implements OnInit {
 
   onBlurInput() {
     this.clickInput = false;
-    console.log(1);
   }
 }

@@ -1,0 +1,60 @@
+<div class="comment">
+  <div class="comment-inner">
+    <a
+      class="comment-id"
+      title="{{ comment.commentBy }}"
+      href="/{{ comment.commentBy }}/"
+    >
+      {{ comment.commentBy }} </a
+    >{{ " " }}
+    <span class="comment-content">
+      <span>
+        <a
+          *ngIf="comment.mention.length > 0"
+          a
+          href="/{{ comment.mention }}/"
+          >{{ "@" + comment.mention }}</a
+        >
+        {{ " " }}
+        {{ comment.comment }}
+      </span>
+    </span>
+  </div>
+  <div *ngIf="comment.likes.length > 0" class="comment-like-count">
+    {{ comment.likes.length }}
+  </div>
+  <span class="comment-like-span">
+    <div class="comment-like">
+      <button type="button" (click)="clickLikeComment()">
+        <svg
+          height="12"
+          viewBox="0 0 48 48"
+          width="12"
+          [style.fill]="commentLikeIcon.fill"
+        >
+          <path
+            clicp-rule="evenodd"
+            [attr.d]="commentLikeIcon.outline"
+            fill-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </span>
+  <span
+    *ngIf="postBy === loginUser || comment.commentBy === loginUser"
+    class="comment-delete-span"
+  >
+    <div class="comment-delete">
+      <button type="button" (click)="clickDeleteComment()">
+        <svg height="24" viewBox="0 0 24 24" width="24">
+          <path
+            clicp-rule="evenodd"
+            [attr.d]="deleteIcon"
+            fill-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </span>
+</div>

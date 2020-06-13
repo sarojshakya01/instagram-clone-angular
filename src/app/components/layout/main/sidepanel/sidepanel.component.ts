@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sidepanel',
@@ -7,6 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SidepanelComponent implements OnInit {
   @Input() profileInfo;
+  @Output() setClickProfileEvent = new EventEmitter();
+
+  setClickProfile() {
+    this.setClickProfileEvent.emit();
+  }
+
   year = new Date().getFullYear();
 
   constructor() {}

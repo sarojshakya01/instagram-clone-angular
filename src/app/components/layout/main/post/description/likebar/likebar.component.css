@@ -1,0 +1,59 @@
+.like-count {
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.like-count-inner {
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.like-count-content {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  white-space: pre;
+}
+
+.like-count-content button {
+  color: #262626;
+  color: rgba(var(--f75, 38, 38, 38), 1);
+  border: 0;
+  display: inline;
+  padding: 0;
+  position: relative;
+  background-color: transparent;
+  -webkit-appearance: none;
+  background: 0 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  text-transform: inherit;
+  text-overflow: ellipsis;
+  user-select: none;
+}

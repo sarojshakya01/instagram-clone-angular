@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -6,7 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css'],
 })
 export class NavComponent implements OnInit {
+  @Input() profileInfo;
+  @Input() clickNav;
+  @Input() inbox;
+
+  @Output() handleNavClickEvent = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
+
+  handleClickNav(navName) {
+    this.handleNavClickEvent.emit(navName);
+  }
 }

@@ -1,7 +1,29 @@
 <div class="nav-icons-inner">
-  <app-home class="nav-icon home"></app-home>
-  <app-direct class="nav-icon direct"></app-direct>
-  <app-explore class="nav-icon explore"></app-explore>
-  <app-activity class="nav-icon activity"></app-activity>
-  <app-profile class="nav-icon profile"></app-profile>
+  <app-home
+    class="nav-icon home"
+    [clickMe]="clickHome"
+    (click)="handleClickNav($event, 'home')"
+  ></app-home>
+  <app-direct
+    class="nav-icon direct"
+    [inbox]="inbox"
+    [clickMe]="clickDirect"
+    (click)="handleClickNav($event, 'direct')"
+  ></app-direct>
+  <app-explore
+    class="nav-icon explore"
+    [clickMe]="clickExplore"
+    (click)="handleClickNav($event, 'explore')"
+  ></app-explore>
+  <app-activity
+    class="nav-icon activity"
+    [clickMe]="clickActivity"
+    (click)="handleClickNav($event, 'activity')"
+  ></app-activity>
+  <app-profile
+    class="nav-icon profile"
+    [clickMe]="clickProfile"
+    (click)="handleClickNav($event, 'profile')"
+    [profileInfo]="profileInfo"
+  ></app-profile>
 </div>

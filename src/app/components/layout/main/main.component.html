@@ -3,11 +3,15 @@
     id="story-top"
     class="story-top story-container dark-off"
   ></app-story>
-  <app-post class="igpost-outer"></app-post>
+  <app-post class="igpost-outer" [profileInfo]="profileInfo"></app-post>
 </section>
 <section *ngIf="windowWidth > 1056" class="main-section-2">
-  <app-post class="igpost-outer"></app-post>
+  <app-post class="igpost-outer" [profileInfo]="profileInfo"></app-post>
   <div class="post-story-gap"></div>
-  <app-sidepanel [profileInfo]="profileInfo" [ngStyle]="sideStyle">
+  <app-sidepanel
+    [profileInfo]="profileInfo"
+    [ngStyle]="sideStyle"
+    (setClickProfileEvent)="setClickProfile()"
+  >
   </app-sidepanel>
 </section>

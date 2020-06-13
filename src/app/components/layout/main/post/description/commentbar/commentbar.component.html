@@ -1,0 +1,8 @@
+<app-comment
+  *ngFor="let comment of comments; let i = index"
+  [attr.d]="comment.commentId"
+  [comment]="comment"
+  [likeIcon]="likeIcon"
+  [loginUser]="loginUser"
+  [postBy]="postBy"
+></app-comment>

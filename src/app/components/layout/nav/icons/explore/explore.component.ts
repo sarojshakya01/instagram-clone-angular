@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 const exploreIcon = {
   white:
@@ -13,10 +13,19 @@ const exploreIcon = {
   styleUrls: ['../icons.component.css', './explore.component.css'],
 })
 export class ExploreComponent implements OnInit {
+  @Input() clickMe;
   icon: string;
   constructor() {
     this.icon = exploreIcon.white;
   }
 
   ngOnInit(): void {}
+
+  ngOnChanges(): void {
+    if (this.clickMe) {
+      this.icon = exploreIcon.black;
+    } else {
+      this.icon = exploreIcon.white;
+    }
+  }
 }

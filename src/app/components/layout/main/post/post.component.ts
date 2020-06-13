@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
+  @Input() profileInfo;
+
   fetched: boolean = false;
-  loginUser: string = 'sarojsh01';
   imgUrl: string = '/assets/img/userdata/';
+
   posts = [
     {
       postId: 1,
@@ -85,7 +87,7 @@ export class PostComponent implements OnInit {
           likes: ['_thehasinaaykahs_'],
         },
       ],
-      postTime: '2020-04-35T08:12:12.002Z',
+      postTime: '2020-04-31T08:12:12.002Z',
     },
     {
       postId: 2,
@@ -115,7 +117,7 @@ export class PostComponent implements OnInit {
           likes: ['pooza_singh91'],
         },
       ],
-      postTime: '2020-04-35T08:12:12.002Z',
+      postTime: '2020-04-31T08:12:12.002Z',
     },
     {
       postId: 3,
@@ -205,15 +207,19 @@ export class PostComponent implements OnInit {
           likes: [],
         },
       ],
-      postTime: '2020-05-01T08:65:12.002Z',
+      postTime: '2020-05-01T08:55:12.002Z',
     },
   ];
+
   postByInfo = [];
   postedPhoto = [];
   postDetails = [];
-  constructor() {
+
+  constructor() {}
+
+  ngOnInit(): void {
     for (let i = 0; i < this.posts.length; i++) {
-      let postedPhoto = this.postByInfo.push({
+      this.postByInfo.push({
         postBy: this.posts[i].postBy,
         postByPhoto: this.posts[i].postByPhoto,
         location: this.posts[i].location,
@@ -224,7 +230,7 @@ export class PostComponent implements OnInit {
       });
       this.postDetails.push({
         postBy: this.posts[i].postBy,
-        loginUser: this.loginUser,
+        loginUser: this.profileInfo.userId,
         caption: this.posts[i].caption,
         likes: this.posts[i].likes,
         comments: this.posts[i].comments,
@@ -232,6 +238,4 @@ export class PostComponent implements OnInit {
       });
     }
   }
-
-  ngOnInit(): void {}
 }

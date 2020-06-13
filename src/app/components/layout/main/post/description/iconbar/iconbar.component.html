@@ -1,0 +1,41 @@
+<section class="igpost-direct">
+  <span class="igpost-direct-action like">
+    <button (click)="clickLikePost()">
+      <svg
+        height="24"
+        viewBox="0 0 48 48"
+        width="24"
+        [style.fill]="postLikeIcon.fill"
+      >
+        <path
+          clicp-rule="evenodd"
+          [attr.d]="postLikeIcon.outline"
+          fill-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
+  </span>
+  <span class="igpost-direct-action comment">
+    <button (click)="clickComment()">
+      <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+        <path
+          clicp-rule="evenodd"
+          [attr.d]="commentIcon"
+          fill-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
+  </span>
+  <button class="igpost-direct-action share" (click)="clickShare()">
+    <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+      <path [attr.d]="shareIcon"></path>
+    </svg>
+  </button>
+  <span class="igpost-direct-action bookmark">
+    <button (click)="clickBookmark()">
+      <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24">
+        <path [attr.d]="bookmarkIcon.white"></path>
+      </svg>
+    </button>
+  </span>
+</section>

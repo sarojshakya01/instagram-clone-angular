@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 const homeIcon = {
   white:
@@ -13,6 +13,7 @@ const homeIcon = {
   styleUrls: ['../icons.component.css', './home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  @Input() clickMe;
   icon: string;
 
   constructor() {
@@ -20,4 +21,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  ngOnChanges(): void {
+    if (this.clickMe) {
+      this.icon = homeIcon.black;
+    } else {
+      this.icon = homeIcon.white;
+    }
+  }
 }

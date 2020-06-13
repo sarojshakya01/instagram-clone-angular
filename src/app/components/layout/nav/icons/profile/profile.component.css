@@ -17,7 +17,7 @@ a {
   border: 1px solid rgba(var(--i1d, 38, 38, 38), 1);
   border-radius: 50%;
   height: 28px;
-  left: 50%;
+  right: -8%;
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);

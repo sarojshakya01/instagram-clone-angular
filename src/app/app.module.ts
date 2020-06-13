@@ -26,6 +26,12 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { SuggestionComponent } from './components/layout/main/sidepanel/suggestion/suggestion.component';
 import { SideProfileComponent } from './components/layout/main/sidepanel/side-profile/side-profile.component';
 import { SideStoryComponent } from './components/layout/main/sidepanel/side-story/side-story.component';
+import { TimebarComponent } from './components/layout/main/post/description/timebar/timebar.component';
+import { IconbarComponent } from './components/layout/main/post/description/iconbar/iconbar.component';
+import { LikebarComponent } from './components/layout/main/post/description/likebar/likebar.component';
+import { CaptionbarComponent } from './components/layout/main/post/description/captionbar/captionbar.component';
+import { CommentbarComponent } from './components/layout/main/post/description/commentbar/commentbar.component';
+import { CommentComponent } from './components/layout/main/post/description/commentbar/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +59,12 @@ import { SideStoryComponent } from './components/layout/main/sidepanel/side-stor
     SuggestionComponent,
     SideProfileComponent,
     SideStoryComponent,
+    TimebarComponent,
+    IconbarComponent,
+    LikebarComponent,
+    CaptionbarComponent,
+    CommentbarComponent,
+    CommentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

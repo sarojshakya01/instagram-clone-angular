@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -6,14 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../icons.component.css', './profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-  style;
-  profilePhoto: string;
+  @Input() profileInfo;
+  @Input() clickMe;
+
+  style: any;
+
   constructor() {
     this.style = {
       display: 'none',
     };
-    this.profilePhoto = 'assets/img/userdata/sarojsh01_profilephoto.jpg';
   }
 
   ngOnInit(): void {}
+
+  ngOnChanges(): void {
+    if (this.clickMe) {
+      this.style.display = 'block';
+    } else {
+      this.style.display = 'none';
+    }
+  }
 }

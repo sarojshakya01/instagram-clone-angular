@@ -1,4 +1,7 @@
 <div class="nav-profile-container" [ngStyle]="style"></div>
-<a href="/">
-  <img alt="'s Profile Pic" src="{{ profilePhoto }}" />
+<a href="/{{ profileInfo.userId }}">
+  <img
+    alt="{{ profileInfo.userId }}'s Profile Pic"
+    src="{{ profileInfo.profilePhoto }}"
+  />
 </a>

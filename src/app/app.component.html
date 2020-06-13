@@ -1,20 +1,15 @@
-<div class="root-inner">
-  <!-- <Main
-                  [darkTheme]={this.state.darkTheme}
-                  profileInfo={this.loginUser}
-                  updateTheme={this.updateTheme}
-                  setClickProfile={this.setClickProfile}
-                />
-                {window.innerWidth <= 1056 ? <Footer /> : null}
-                <Nav
-            label={darkLabel}
-            profileInfo={this.loginUser}
-            clickNav={this.state.clickNav}
-            inbox={this.state.inbox}
-            changeTheme={this.changeTheme}
-            handleClickNav={this.handleClickNav}
-          /> -->
-  <app-main class="dark-off"></app-main>
+<div class="root-inner" (window:resize)="onResize($event)">
+  <app-main
+    class="dark-off"
+    [windowWidth]="windowWidth"
+    [profileInfo]="profileInfo"
+    (setClickProfileEvent)="setClickProfile()"
+  ></app-main>
   <app-footer *ngIf="windowWidth <= 1056"></app-footer>
-  <app-nav></app-nav>
+  <app-nav
+    [profileInfo]="profileInfo"
+    [inbox]="inbox"
+    [clickNav]="clickNav"
+    (handleNavClickEvent)="handleClickNav($event)"
+  ></app-nav>
 </div>

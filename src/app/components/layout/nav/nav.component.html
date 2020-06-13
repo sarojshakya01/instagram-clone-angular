@@ -3,7 +3,13 @@
     <div class="nav-menus">
       <app-brand class="nav-brand"></app-brand>
       <app-search class="nav-search dark-off"></app-search>
-      <app-icons class="nav-icons-container"></app-icons>
+      <app-icons
+        class="nav-icons-container"
+        [profileInfo]="profileInfo"
+        [clickNav]="clickNav"
+        [inbox]="inbox"
+        (handleNavClickEvent)="handleClickNav($event)"
+      ></app-icons>
     </div>
     <!-- <app-switch-theme></app-switch-theme> -->
   </div>
