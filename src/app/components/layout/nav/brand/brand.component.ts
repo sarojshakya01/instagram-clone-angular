@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./brand.component.css'],
 })
 export class BrandComponent implements OnInit {
-  logo: string;
-  style;
+  public logo: string;
+  public style: Object;
 
   constructor() {}
 

@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-story.component.css'],
 })
 export class SideStoryComponent implements OnInit {
-  fetched: boolean = true;
-  stories = [
+  public fetched: boolean = true;
+  public stories = [
     {
       userId: 'pooza_singh91',
       profilePhoto: '/assets/img/userdata/pooza_singh91_profilephoto.jpg',
@@ -54,6 +54,7 @@ export class SideStoryComponent implements OnInit {
       storyDate: 'Tue May 05 2020 00:00:00 GMT+0545 (Nepal Time)',
     },
   ];
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,11 +1,12 @@
-<div
-  *ngFor="let story of stories; let i = index"
-  class="story"
-  [ngStyle]="styleTransform[i]"
->
-  <button class="story-btn" role="menuitem" tabIndex="0">
+<div class="story">
+  <button
+    class="story-btn"
+    role="menuitem"
+    tabIndex="0"
+    (click)="clickStory($event)"
+  >
     <div class="story-btn-inner" role="button" tabIndex="0">
-      <canvas id="story-canvas-{{ i }}" height="66" width="66"></canvas>
+      <canvas id="story-canvas-{{ index }}" height="66" width="66"></canvas>
       <span class="canvas-span">
         <img
           alt="{{ story.userId }}'s Profile Pic"

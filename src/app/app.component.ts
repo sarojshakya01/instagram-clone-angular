@@ -6,28 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  windowWidth = window.innerWidth;
+  public windowWidth: number = window.innerWidth;
 
-  profileInfo = {
+  public profileInfo = {
     userId: 'sarojsh01',
     userName: 'Saroj Shakya',
     profilePhoto: 'assets/img/userdata/sarojsh01_profilephoto.jpg',
   };
 
-  clickNav = 'home';
-  inbox = 5;
+  public clickNav: string = 'home';
+  public inbox: number = 5;
 
   ngOnInit(): void {}
 
-  onResize(event) {
+  public onResize(event) {
     this.windowWidth = event.target.innerWidth;
   }
 
-  setClickProfile = () => {
+  public setClickProfile = () => {
     this.clickNav = 'profile';
   };
 
-  handleClickNav = (navName) => {
+  public handleClickNav = (navName) => {
     if (navName === 'home') {
       this.clickNav = 'home';
     } else if (navName === 'direct') {

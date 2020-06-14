@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-story',
@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['/src/app/app.component.css', './story.component.css'],
 })
 export class StoryComponent implements OnInit {
-  fetched: boolean = true;
-  stories = [
+  @Input() profileInfo;
+
+  public fetched: boolean = true;
+  public stories = [
     {
       userId: 'pooza_singh91',
       profilePhoto: '/assets/img/userdata/pooza_singh91_profilephoto.jpg',
@@ -55,35 +57,49 @@ export class StoryComponent implements OnInit {
     },
   ];
 
-  visibleStories = [];
-  storyIndex: number = 0;
+  public styleTransform = [];
+  public visibleStories = [];
+  public storyIndex: number = 0;
   constructor() {}
 
   ngOnInit(): void {
-    this.populateVisibleStories();
+    this.visibleStories = this.populateVisibleStories();
+    this.createStyle();
   }
 
-  clickPrevStory(): void {
+  public clickPrevStory(): void {
     if (this.storyIndex > 3) {
       this.storyIndex = this.storyIndex - 4;
     }
-    // this.populateVisibleStories();
+    this.visibleStories = this.populateVisibleStories();
   }
 
-  clickNextStory(): void {
+  public clickNextStory(): void {
     if (this.stories.length > this.storyIndex + 7) {
       this.storyIndex = this.storyIndex + 4;
     }
-    // this.populateVisibleStories();
+    this.visibleStories = this.populateVisibleStories();
   }
 
-  populateVisibleStories(): void {
+  private populateVisibleStories(): any {
     const uptoIndex =
       this.stories.length > this.storyIndex + 8
         ? this.storyIndex + 8
         : this.stories.length;
+
+    let tempStories = [];
     for (let i = this.storyIndex; i < uptoIndex; i++) {
-      this.visibleStories.push(this.stories[i]);
+      tempStories.push(this.stories[i]);
     }
+
+    return tempStories;
+  }
+
+  private createStyle(): void {
+    this.stories.map((story, index) => {
+      this.styleTransform.push({
+        transform: 'translateX(' + 80 * index + 'px)',
+      });
+    });
   }
 }

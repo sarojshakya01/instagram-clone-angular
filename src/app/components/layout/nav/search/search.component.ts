@@ -6,18 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  clickInput: boolean = false;
-  dataFetched: boolean = false;
+  public clickInput: boolean = false;
+  public dataFetched: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  onClickInput() {
+  public onClickInput() {
     document.getElementById('nav-search-input').focus();
     this.clickInput = true;
   }
 
-  onBlurInput() {
+  public onBlurInput() {
     this.clickInput = false;
   }
 }

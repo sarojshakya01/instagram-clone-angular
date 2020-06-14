@@ -7,8 +7,15 @@
         id="{{ i }}"
       >
         <app-header [postByInfo]="postByInfo[i]"></app-header>
-        <app-photo [photo]="postedPhoto[i]"></app-photo>
-        <app-description [postDetails]="postDetails[i]"></app-description>
+        <app-photo
+          [photo]="postedPhoto[i]"
+          [postId]="i"
+          (clickPhotoEvent)="handleClickPhoto($event)"
+        ></app-photo>
+        <app-description
+          [liked]="liked"
+          [postDetails]="postDetails[i]"
+        ></app-description>
         <app-post-option></app-post-option>
       </article>
     </div>

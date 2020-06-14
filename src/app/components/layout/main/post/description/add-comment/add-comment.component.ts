@@ -6,16 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-comment.component.css'],
 })
 export class AddCommentComponent implements OnInit {
-  btnDisabled: boolean = true;
-  inputDisabled: boolean = false;
-  fetched: boolean = true;
-  value: string = '';
+  public btnDisabled: boolean = true;
+  public inputDisabled: boolean = false;
+  public fetched: boolean = true;
+  public value: string = '';
   constructor() {}
 
   ngOnInit(): void {
     this.btnDisabled = this.value.trim() === '' || !this.fetched;
     this.inputDisabled = !this.fetched;
   }
-  handlePostCommentBtn(): void {}
-  onChangeInput(): void {}
+
+  public handlePostCommentBtn(): void {}
+
+  public onChangeInput(): void {}
 }

@@ -10,12 +10,12 @@ export class SideProfileComponent implements OnInit {
 
   @Output() setClickProfileEvent = new EventEmitter();
 
-  clickProfile(e) {
-    this.setClickProfileEvent.emit();
-    e.preventDefault();
-  }
-
   constructor() {}
 
   ngOnInit(): void {}
+
+  public clickProfile(e) {
+    this.setClickProfileEvent.emit();
+    e.preventDefault();
+  }
 }

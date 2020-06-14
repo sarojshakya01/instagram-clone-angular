@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-photo',
@@ -7,12 +7,31 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PhotoComponent implements OnInit {
   @Input() photo;
-  imgUrl: string = '/assets/img/userdata/';
-  photoIndex: number = 0;
+  @Input() postId;
+  @Output() clickPhotoEvent = new EventEmitter();
+
+  public imgUrl: string = '/assets/img/userdata/';
+  public photoIndex: number = 0;
+
   constructor() {
     this.photoIndex = 0;
   }
 
   ngOnInit(): void {}
-  doubleClickPost(): void {}
+
+  public doubleClickPost(e): void {
+    this.clickPhotoEvent.emit(this.postId);
+  }
+
+  public prevPhoto(): void {
+    if (this.photoIndex > 0) {
+      this.photoIndex = this.photoIndex - 1;
+    }
+  }
+
+  public nextPhoto(): void {
+    if (this.photoIndex + 1 < this.photo.photo.length) {
+      this.photoIndex = this.photoIndex + 1;
+    }
+  }
 }

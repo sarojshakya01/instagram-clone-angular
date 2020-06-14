@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-comment',
@@ -10,17 +10,20 @@ export class CommentComponent implements OnInit {
   @Input() likeIcon;
   @Input() loginUser;
   @Input() postBy;
+  @Input() index;
+
+  @Output() handleClickDeleteComment = new EventEmitter();
 
   constructor() {}
 
-  likeComment: boolean;
+  public likeComment: boolean;
 
-  commentLikeIcon = {
+  public commentLikeIcon = {
     fill: '',
     outline: '',
   };
 
-  deleteIcon =
+  public deleteIcon =
     'M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z';
 
   ngOnInit(): void {
@@ -35,7 +38,7 @@ export class CommentComponent implements OnInit {
     }
   }
 
-  clickLikeComment(): void {
+  public clickLikeComment(): void {
     this.likeComment = !this.likeComment;
     const indexOfCommentLiker = this.comment.likes.indexOf(this.loginUser);
     if (this.likeComment) {
@@ -49,5 +52,7 @@ export class CommentComponent implements OnInit {
     }
   }
 
-  clickDeleteComment(): void {}
+  public clickDeleteComment(): void {
+    this.handleClickDeleteComment.emit(this.index);
+  }
 }

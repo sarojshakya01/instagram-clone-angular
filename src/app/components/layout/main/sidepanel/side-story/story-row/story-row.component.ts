@@ -1,23 +1,28 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-timebar',
-  templateUrl: './timebar.component.html',
-  styleUrls: ['./timebar.component.css'],
+  selector: 'app-story-row',
+  templateUrl: './story-row.component.html',
+  styleUrls: ['./story-row.component.css'],
 })
-export class TimebarComponent implements OnInit {
-  @Input() postTime;
+export class StoryRowComponent implements OnInit {
+  @Input() story;
+  @Input() index;
+
   public label: string;
 
   constructor() {}
 
   ngOnInit(): void {
-    const dateInt = Date.parse(this.postTime);
+    const { userId, profilePhoto, storyDate } = this.story;
+    const dateInt = Date.parse(storyDate);
 
     let now = new Date();
     let nowNum = Number(now);
     const diffSec = (nowNum - dateInt) / 1000;
     let roundedDiff = 0;
+
+    // if (diffSec / 3600 > 24) return null;
 
     if (diffSec < 60) {
       roundedDiff = Math.round(diffSec);
@@ -51,6 +56,20 @@ export class TimebarComponent implements OnInit {
         roundedDiff.toString() +
         (roundedDiff > 1 ? ' years' : ' yeaar') +
         ' ago';
+    }
+  }
+
+  ngAfterViewInit() {
+    const id = 'story-canvas-' + this.index;
+    let canvas = <HTMLCanvasElement>document.getElementById(id);
+    console.log(canvas);
+    if (canvas !== null) {
+      let ctx = canvas.getContext('2d');
+      ctx.beginPath();
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#ff0000';
+      ctx.arc(22, 22, 20, 0, 2 * Math.PI);
+      ctx.stroke();
     }
   }
 }

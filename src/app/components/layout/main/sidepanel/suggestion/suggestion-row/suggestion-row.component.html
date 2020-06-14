@@ -1,0 +1,40 @@
+<div class="suggestion-row">
+  <div class="suggestion-profile-photo-container">
+    <div class="suggestion-profile-photo" role="button" tabIndex="0">
+      <canvas
+        id="suggestion-canvas-{{ index }}"
+        height="42"
+        width="42"
+      ></canvas>
+      <span role="link" tabIndex="0">
+        <img
+          alt="{{ suggestion.userId }}'s Profile pic"
+          src="{{ suggestion.profilePhoto }}"
+        />
+      </span>
+    </div>
+  </div>
+  <div class="suggestion-user-label">
+    <div class="suggestion-user-id">
+      <div class="suggestion-user-id-inner">
+        <a title="{{ suggestion.userId }}" href="/{{ suggestion.userId }}/">
+          <div class="suggestion-user-id-inner-container">
+            <div class="suggestion-user-id-content-outer">
+              <div class="suggestion-user-id-content">
+                {{ suggestion.userId }}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="suggestion-follow">
+      <div class="suggestion-follow-content">
+        {{ followLabel }}
+      </div>
+    </div>
+  </div>
+  <div class="follow-link">
+    <button (click)="clickFollow()">{{ "Follow" }}</button>
+  </div>
+</div>

@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./suggestion.component.css'],
 })
 export class SuggestionComponent implements OnInit {
-  fetched: boolean = true;
-  apiResponse = [
+  public fetched: boolean = true;
+  public apiResponse = [
     {
       followedBy: [
         'pooza_singh91',
@@ -97,13 +97,14 @@ export class SuggestionComponent implements OnInit {
       },
     },
   ];
-  suggestions = [];
-  followLabel = [];
+  public suggestions = [];
+  public followLabel = [];
 
   constructor() {
     let followedBy = this.apiResponse[0].followedBy;
     let follows = this.apiResponse[1].follows;
     let suggestionTemp = [];
+
     for (let i = 2; i < this.apiResponse.length; i++) {
       suggestionTemp.push(this.apiResponse[i]);
     }
@@ -151,5 +152,4 @@ export class SuggestionComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-  clickFollow(): void {}
 }

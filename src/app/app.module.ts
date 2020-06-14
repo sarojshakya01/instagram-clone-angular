@@ -15,7 +15,7 @@ import { ProfileComponent } from './components/layout/nav/icons/profile/profile.
 import { MainComponent } from './components/layout/main/main.component';
 import { PostComponent } from './components/layout/main/post/post.component';
 import { StoryComponent } from './components/layout/main/story/story.component';
-import { StoriesComponent } from './components/layout/main/story/stories/stories.component';
+import { StoryIconComponent } from './components/layout/main/story/story-icon/story-icon.component';
 import { SidepanelComponent } from './components/layout/main/sidepanel/sidepanel.component';
 import { PhotoComponent } from './components/layout/main/post/photo/photo.component';
 import { HeaderComponent } from './components/layout/main/post/header/header.component';
@@ -32,6 +32,8 @@ import { LikebarComponent } from './components/layout/main/post/description/like
 import { CaptionbarComponent } from './components/layout/main/post/description/captionbar/captionbar.component';
 import { CommentbarComponent } from './components/layout/main/post/description/commentbar/commentbar.component';
 import { CommentComponent } from './components/layout/main/post/description/commentbar/comment/comment.component';
+import { SuggestionRowComponent } from './components/layout/main/sidepanel/suggestion/suggestion-row/suggestion-row.component';
+import { StoryRowComponent } from './components/layout/main/sidepanel/side-story/story-row/story-row.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,7 @@ import { CommentComponent } from './components/layout/main/post/description/comm
     MainComponent,
     PostComponent,
     StoryComponent,
-    StoriesComponent,
+    StoryIconComponent,
     SidepanelComponent,
     PhotoComponent,
     HeaderComponent,
@@ -65,6 +67,8 @@ import { CommentComponent } from './components/layout/main/post/description/comm
     CaptionbarComponent,
     CommentbarComponent,
     CommentComponent,
+    SuggestionRowComponent,
+    StoryRowComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

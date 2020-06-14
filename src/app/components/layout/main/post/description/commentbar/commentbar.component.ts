@@ -11,8 +11,8 @@ export class CommentbarComponent implements OnInit {
   @Input() loginUser;
   @Input() likeIcon;
 
-  myComments: any;
-  clickViewAll: boolean;
+  public myComments: any;
+  public clickViewAll: boolean;
 
   constructor() {}
 
@@ -20,7 +20,7 @@ export class CommentbarComponent implements OnInit {
     this.myComments = this.shortenComment();
   }
 
-  handleViewAll(e): void {
+  public handleViewAll(e): void {
     e.preventDefault();
     this.clickViewAll = !this.clickViewAll;
     if (this.clickViewAll) {
@@ -32,12 +32,20 @@ export class CommentbarComponent implements OnInit {
     }
   }
 
-  shortenComment(): any {
+  private shortenComment(): any {
     let commentLimit = this.comments.length < 3 ? this.comments.length : 3;
     let newComments = [];
     for (let i = 0; i < commentLimit; i++) {
       newComments[i] = this.comments[i];
     }
     return newComments;
+  }
+
+  public deleteComment(commentId): void {
+    const tempComment = [...this.comments];
+    const commentIdx = tempComment.indexOf(this.myComments[commentId]);
+    tempComment.splice(commentIdx, 1);
+    this.comments = tempComment;
+    this.myComments = this.shortenComment();
   }
 }

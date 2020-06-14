@@ -11,11 +11,7 @@ export class MainComponent implements OnInit {
 
   @Output() setClickProfileEvent = new EventEmitter();
 
-  setClickProfile() {
-    this.setClickProfileEvent.emit();
-  }
-
-  sideStyle = {};
+  public sideStyle: any = {};
 
   constructor() {}
 
@@ -34,5 +30,9 @@ export class MainComponent implements OnInit {
     const element = document.getElementById('igpost-main');
     const leftPos = element.getBoundingClientRect().left + window.scrollX;
     this.sideStyle = { left: (leftPos + 642).toString() + 'px' };
+  }
+
+  public setClickProfile() {
+    this.setClickProfileEvent.emit();
   }
 }

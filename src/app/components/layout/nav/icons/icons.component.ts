@@ -12,16 +12,11 @@ export class IconsComponent implements OnInit {
 
   @Output() handleNavClickEvent = new EventEmitter();
 
-  handleClickNav(e, navName) {
-    this.handleNavClickEvent.emit(navName);
-    e.preventDefault();
-  }
-
-  clickHome: boolean;
-  clickDirect: boolean;
-  clickExplore: boolean;
-  clickActivity: boolean;
-  clickProfile: boolean;
+  public clickHome: boolean;
+  public clickDirect: boolean;
+  public clickExplore: boolean;
+  public clickActivity: boolean;
+  public clickProfile: boolean;
 
   constructor() {
     this.clickHome = true;
@@ -39,5 +34,10 @@ export class IconsComponent implements OnInit {
     this.clickExplore = this.clickNav === 'explore';
     this.clickActivity = this.clickNav === 'activity';
     this.clickProfile = this.clickNav === 'profile';
+  }
+
+  public handleClickNav(e, navName) {
+    this.handleNavClickEvent.emit(navName);
+    e.preventDefault();
   }
 }

@@ -3,7 +3,7 @@
     class="igpost-image"
     role="button"
     tabIndex="0"
-    (doubleClick)="doubleClickPost()"
+    (dblclick)="doubleClickPost($event)"
   >
     <div class="igpost-image-bg">
       <div class="igpost-image-bg-content">
@@ -19,18 +19,23 @@
       *ngIf="photo.photo.length > 0 && photoIndex > 0"
       class="slide-arrow slide-arrow-left"
       tabIndex="-1"
+      (click)="prevPhoto()"
     >
       <div class="slide-arrow-icon slide-arrow-icon-left"></div>
     </div>
     <div
-      *ngIf="photo.photo.length > 1"
+      *ngIf="photo.photo.length > 1 && photoIndex + 1 < photo.photo.length"
       class="slide-arrow slide-arrow-right"
       tabIndex="-1"
+      (click)="nextPhoto()"
     >
       <div class="slide-arrow-icon slide-arrow-icon-right"></div>
     </div>
     <div class="igpost-image-indicator">
-      <div *ngFor="let dot of photo.photo; let i = index" class="dot"></div>
+      <div
+        *ngFor="let dot of photo.photo; let i = index"
+        class="dot {{ i == photoIndex ? 'current' : '' }}"
+      ></div>
       <div *ngIf="photo.photo.length === 0" class="blank-dot"></div>
     </div>
   </div>

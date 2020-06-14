@@ -14,7 +14,8 @@ const exploreIcon = {
 })
 export class ExploreComponent implements OnInit {
   @Input() clickMe;
-  icon: string;
+  public icon: string;
+
   constructor() {
     this.icon = exploreIcon.white;
   }

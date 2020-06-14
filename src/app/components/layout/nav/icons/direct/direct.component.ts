@@ -16,7 +16,7 @@ export class DirectComponent implements OnInit {
   @Input() inbox;
   @Input() clickMe;
 
-  icon: string;
+  public icon: string;
 
   constructor() {
     this.icon = directIcon.white;

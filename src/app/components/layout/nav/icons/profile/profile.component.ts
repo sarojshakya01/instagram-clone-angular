@@ -9,7 +9,7 @@ export class ProfileComponent implements OnInit {
   @Input() profileInfo;
   @Input() clickMe;
 
-  style: any;
+  public style: any;
 
   constructor() {
     this.style = {

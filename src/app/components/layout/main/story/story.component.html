@@ -4,7 +4,12 @@
   </div>
   <div *ngIf="fetched" class="story-inner">
     <div class="story-inner-inner">
-      <app-stories [stories]="visibleStories"></app-stories>
+      <app-story-icon
+        *ngFor="let story of visibleStories; let i = index"
+        [ngStyle]="styleTransform[i]"
+        [index]="i"
+        [story]="story"
+      ></app-story-icon>
     </div>
   </div>
   <div

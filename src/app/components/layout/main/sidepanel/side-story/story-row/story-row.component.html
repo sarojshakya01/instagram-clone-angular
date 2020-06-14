@@ -1,0 +1,23 @@
+<div class="story-row">
+  <button>
+    <div class="story-profile-photo" role="button" tabIndex="0">
+      <canvas id="story-canvas-{{ index }}" height="44" width="44"></canvas>
+      <span role="link" tabIndex="0">
+        <img
+          alt="{{ story.userId }}'s Profile pic"
+          src="{{ story.profilePhoto }}"
+        />
+      </span>
+    </div>
+    <div class="story-user-label">
+      <div class="story-user-id">
+        <span>{{ story.userId }}</span>
+      </div>
+      <div class="story-time">
+        <time dateTime="{{ story.storyDate }}" title="{{ story.storyDate }}">
+          {{ label }}
+        </time>
+      </div>
+    </div>
+  </button>
+</div>

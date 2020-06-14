@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  handleClickNav(navName) {
+  public handleClickNav(navName) {
     this.handleNavClickEvent.emit(navName);
   }
 }

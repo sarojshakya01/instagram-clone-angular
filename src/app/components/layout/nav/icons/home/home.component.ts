@@ -14,7 +14,7 @@ const homeIcon = {
 })
 export class HomeComponent implements OnInit {
   @Input() clickMe;
-  icon: string;
+  public icon: string;
 
   constructor() {
     this.icon = homeIcon.white;

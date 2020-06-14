@@ -8,10 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PostComponent implements OnInit {
   @Input() profileInfo;
 
-  fetched: boolean = false;
-  imgUrl: string = '/assets/img/userdata/';
+  public fetched: boolean = false;
+  public imgUrl: string = '/assets/img/userdata/';
+  public liked: boolean = false;
+  public postByInfo: Array<Object> = [];
+  public postedPhoto: Array<Object> = [];
+  public postDetails: any = [];
 
-  posts = [
+  public posts = [
     {
       postId: 1,
       postBy: 'sarojsh01',
@@ -90,7 +94,7 @@ export class PostComponent implements OnInit {
       postTime: '2020-04-31T08:12:12.002Z',
     },
     {
-      postId: 2,
+      postId: 3,
       postBy: 'pooza_singh91',
       postByPhoto: this.imgUrl + 'pooza_singh91_profilephoto.jpg',
       photo: ['pooza_singh91_photo1.jpg'],
@@ -120,7 +124,7 @@ export class PostComponent implements OnInit {
       postTime: '2020-04-31T08:12:12.002Z',
     },
     {
-      postId: 3,
+      postId: 4,
       postBy: 'bidhan.sthapit',
       postByPhoto: this.imgUrl + 'bidhan.sthapit_profilephoto.jpg',
       photo: ['bidhan.sthapit_photo1.jpg'],
@@ -150,7 +154,7 @@ export class PostComponent implements OnInit {
       postTime: '2020-03-12T08:05:12.002Z',
     },
     {
-      postId: 4,
+      postId: 5,
       postBy: 'elna_stha',
       postByPhoto: this.imgUrl + 'elna_stha_profilephoto.jpg',
       photo: ['elna_stha_photo1.jpg'],
@@ -180,7 +184,7 @@ export class PostComponent implements OnInit {
       postTime: '2020-04-06T03:12:12.002Z',
     },
     {
-      postId: 5,
+      postId: 6,
       postBy: 'rebatov',
       postByPhoto: this.imgUrl + 'rebatov_profilephoto.jpg',
       photo: ['rebatov_photo1.jpg', 'rebatov_photo2.jpg'],
@@ -211,10 +215,6 @@ export class PostComponent implements OnInit {
     },
   ];
 
-  postByInfo = [];
-  postedPhoto = [];
-  postDetails = [];
-
   constructor() {}
 
   ngOnInit(): void {
@@ -237,5 +237,19 @@ export class PostComponent implements OnInit {
         postTime: this.posts[i].postTime,
       });
     }
+  }
+
+  public handleClickPhoto(postId): void {
+    let postsDetails = [...this.postDetails];
+
+    const indexOfPostLiker = postsDetails[postId].likes.indexOf(
+      this.profileInfo.userId
+    );
+
+    indexOfPostLiker > -1
+      ? postsDetails[postId].likes.splice(indexOfPostLiker, 1)
+      : postsDetails[postId].likes.push(this.profileInfo.userId);
+
+    this.liked = indexOfPostLiker <= 0;
   }
 }

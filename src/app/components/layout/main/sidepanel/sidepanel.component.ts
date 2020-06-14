@@ -9,13 +9,13 @@ export class SidepanelComponent implements OnInit {
   @Input() profileInfo;
   @Output() setClickProfileEvent = new EventEmitter();
 
-  setClickProfile() {
-    this.setClickProfileEvent.emit();
-  }
-
-  year = new Date().getFullYear();
+  public year: number = new Date().getFullYear();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  public setClickProfile() {
+    this.setClickProfileEvent.emit();
+  }
 }
