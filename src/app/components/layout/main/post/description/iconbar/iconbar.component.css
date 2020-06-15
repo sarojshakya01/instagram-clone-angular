@@ -54,3 +54,11 @@
   margin-right: -10px;
   display: inline-block;
 }
+
+svg.liked {
+  fill: red;
+}
+
+svg.not-liked {
+  fill: black;
+}

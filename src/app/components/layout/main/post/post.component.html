@@ -9,12 +9,11 @@
         <app-header [postByInfo]="postByInfo[i]"></app-header>
         <app-photo
           [photo]="postedPhoto[i]"
-          [postId]="i"
           (clickPhotoEvent)="handleClickPhoto($event)"
         ></app-photo>
         <app-description
-          [liked]="liked"
           [postDetails]="postDetails[i]"
+          (handleLikePhotoEvent)="handleLikePhoto($event)"
         ></app-description>
         <app-post-option></app-post-option>
       </article>

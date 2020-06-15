@@ -1,7 +1,8 @@
 <div class="igpost-description">
   <app-iconbar
-    [likePost]="likePost"
+    [likePost]="postDetails.likes.indexOf(postDetails.loginUser) > -1"
     [likeIcon]="likeIcon"
+    [index]="postDetails.postId"
     (clickPostEvent)="clickPostLike($event)"
   ></app-iconbar>
   <app-likebar [likes]="postDetails.likes"></app-likebar>
@@ -21,5 +22,11 @@
     class="igpost-time"
     [postTime]="postDetails.postTime"
   ></app-timebar>
-  <app-add-comment></app-add-comment>
+  <app-add-comment
+    [fetched]="fetched"
+    [value]="value"
+    (postCommentBtnEvent)="handlePostCommentBtn($event)"
+    (postCommentEvent)="handlePostComment($event)"
+    (inputChangeEvent)="onChangeInput($event)"
+  ></app-add-comment>
 </div>

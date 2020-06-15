@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-add-comment',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-comment.component.css'],
 })
 export class AddCommentComponent implements OnInit {
+  @Input() fetched;
+  @Input() value;
+
+  @Output() postCommentBtnEvent = new EventEmitter();
+  @Output() postCommentEvent = new EventEmitter();
+  @Output() inputChangeEvent = new EventEmitter();
+
   public btnDisabled: boolean = true;
   public inputDisabled: boolean = false;
-  public fetched: boolean = true;
-  public value: string = '';
+
   constructor() {}
 
   ngOnInit(): void {
@@ -17,7 +23,18 @@ export class AddCommentComponent implements OnInit {
     this.inputDisabled = !this.fetched;
   }
 
-  public handlePostCommentBtn(): void {}
+  public handlePostCommentBtn(e): void {
+    this.postCommentBtnEvent.emit(e);
+    e.target.value = '';
+  }
 
-  public onChangeInput(): void {}
+  public handlePostComment(e): void {
+    this.postCommentEvent.emit(e);
+  }
+
+  public onChangeInput(e): void {
+    this.inputChangeEvent.emit(e);
+    this.btnDisabled =
+      e.target.value.trim() === '' || !this.fetched ? true : false;
+  }
 }

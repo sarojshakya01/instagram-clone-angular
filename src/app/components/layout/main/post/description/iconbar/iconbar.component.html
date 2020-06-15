@@ -2,21 +2,21 @@
   <span class="igpost-direct-action like">
     <button (click)="clickLikePost()">
       <svg
+        class="{{ likePost ? 'liked' : 'not-liked' }}"
         height="24"
         viewBox="0 0 48 48"
         width="24"
-        [style.fill]="postLikeIcon.fill"
       >
         <path
           clicp-rule="evenodd"
-          [attr.d]="postLikeIcon.outline"
+          attr.d="{{ likePost ? likeIcon.black : likeIcon.white }}"
           fill-rule="evenodd"
         ></path>
       </svg>
     </button>
   </span>
   <span class="igpost-direct-action comment">
-    <button (click)="clickComment()">
+    <button (click)="clickComment($event)">
       <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24">
         <path
           clicp-rule="evenodd"

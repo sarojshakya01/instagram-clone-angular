@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {} from 'events';
 
 @Component({
   selector: 'app-description',
@@ -7,8 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DescriptionComponent implements OnInit {
   @Input() postDetails;
-  @Input() liked;
-  public likePost: boolean;
+  @Output() handleLikePhotoEvent = new EventEmitter();
+
+  public fetched: boolean = true;
+  public value: string = '';
 
   public likeIcon = {
     white:
@@ -19,24 +22,52 @@ export class DescriptionComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.likePost =
-      this.postDetails.likes.indexOf(this.postDetails.loginUser) > -1;
+  ngOnInit(): void {}
+
+  public clickPostLike(e): void {
+    this.handleLikePhotoEvent.emit(this.postDetails.postId);
   }
 
-  ngOnChanges(): void {
-    // this.likePost = this.liked;
+  public handlePostCommentBtn(e): void {
+    this.postComment();
   }
 
-  public clickPostLike(likePost): void {
-    const indexOfPostLiker = this.postDetails.likes.indexOf(
-      this.postDetails.loginUser
-    );
-
-    if (likePost) {
-      this.postDetails.likes.push(this.postDetails.loginUser);
-    } else {
-      this.postDetails.likes.splice(indexOfPostLiker, 1);
+  public handlePostComment(e): void {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (this.value.trim() !== '') {
+        this.postComment();
+      }
     }
   }
+
+  public onChangeInput(e): void {
+    this.value = e.target.value;
+  }
+
+  private postComment = () => {
+    if (this.value !== '') {
+      const value = this.value;
+      const newComment = {
+        commentBy: this.postDetails.loginUser,
+        mention:
+          value.indexOf('@') > -1
+            ? value.substring(
+                value.indexOf('@') + 1,
+                value.indexOf(' ') - value.indexOf('@')
+              )
+            : '',
+        comment:
+          value.indexOf('@') > -1
+            ? value.substring(value.indexOf(' ') + 1)
+            : value,
+        likes: [],
+      };
+
+      let postDetails = { ...this.postDetails };
+      postDetails.comments.push(newComment);
+      this.value = '';
+      this.fetched = true;
+    }
+  };
 }

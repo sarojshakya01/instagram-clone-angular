@@ -10,7 +10,6 @@ export class PostComponent implements OnInit {
 
   public fetched: boolean = false;
   public imgUrl: string = '/assets/img/userdata/';
-  public liked: boolean = false;
   public postByInfo: Array<Object> = [];
   public postedPhoto: Array<Object> = [];
   public postDetails: any = [];
@@ -225,11 +224,12 @@ export class PostComponent implements OnInit {
         location: this.posts[i].location,
       });
       this.postedPhoto.push({
+        postId: this.posts[i].postId,
         postBy: this.posts[i].postBy,
         photo: this.posts[i].photo,
       });
       this.postDetails.push({
-        postBy: this.posts[i].postBy,
+        postId: this.posts[i].postId,
         loginUser: this.profileInfo.userId,
         caption: this.posts[i].caption,
         likes: this.posts[i].likes,
@@ -239,17 +239,29 @@ export class PostComponent implements OnInit {
     }
   }
 
-  public handleClickPhoto(postId): void {
-    let postsDetails = [...this.postDetails];
+  public handleLikePhoto(postId): void {
+    const postIndex = postId - 1;
+    let postDetails = [...this.postDetails];
 
-    const indexOfPostLiker = postsDetails[postId].likes.indexOf(
+    const indexOfPostLiker = postDetails[postIndex].likes.indexOf(
       this.profileInfo.userId
     );
 
     indexOfPostLiker > -1
-      ? postsDetails[postId].likes.splice(indexOfPostLiker, 1)
-      : postsDetails[postId].likes.push(this.profileInfo.userId);
+      ? postDetails[postIndex].likes.splice(indexOfPostLiker, 1)
+      : postDetails[postIndex].likes.push(this.profileInfo.userId);
+  }
 
-    this.liked = indexOfPostLiker <= 0;
+  public handleClickPhoto(postId): void {
+    const postIndex = postId - 1;
+    let postDetails = [...this.postDetails];
+
+    const indexOfPostLiker = postDetails[postIndex].likes.indexOf(
+      this.profileInfo.userId
+    );
+
+    if (indexOfPostLiker === -1) {
+      postDetails[postIndex].likes.push(this.profileInfo.userId);
+    }
   }
 }

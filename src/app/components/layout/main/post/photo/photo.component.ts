@@ -7,7 +7,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PhotoComponent implements OnInit {
   @Input() photo;
-  @Input() postId;
   @Output() clickPhotoEvent = new EventEmitter();
 
   public imgUrl: string = '/assets/img/userdata/';
@@ -20,7 +19,7 @@ export class PhotoComponent implements OnInit {
   ngOnInit(): void {}
 
   public doubleClickPost(e): void {
-    this.clickPhotoEvent.emit(this.postId);
+    this.clickPhotoEvent.emit(this.photo.postId);
   }
 
   public prevPhoto(): void {

@@ -9,15 +9,14 @@
         placeholder="Add a comment…"
         autoComplete="off"
         autoCorrect="off"
-        (change)="onChangeInput()"
-        value="value"
-        onKeyDown="handlePostComment()"
-        ng-disabled="true"
+        (keyup)="onChangeInput($event)"
+        (keydown)="handlePostComment($event)"
+        [value]="value"
       ></textarea>
       <button
-        disabled="btnDisabled"
+        [disabled]="btnDisabled"
         type="button"
-        (click)="handlePostCommentBtn()"
+        (click)="handlePostCommentBtn($event)"
       >
         {{ "Post" }}
       </button>
