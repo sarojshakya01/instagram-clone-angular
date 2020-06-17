@@ -33,10 +33,11 @@ export class CommentbarComponent implements OnInit {
   }
 
   private shortenComment(): any {
+    const tempCommentList = this.comments.reverse();
     let commentLimit = this.comments.length < 3 ? this.comments.length : 3;
     let newComments = [];
     for (let i = 0; i < commentLimit; i++) {
-      newComments[i] = this.comments[i];
+      newComments[i] = tempCommentList[i];
     }
     return newComments;
   }

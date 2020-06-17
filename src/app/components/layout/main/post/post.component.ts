@@ -230,6 +230,7 @@ export class PostComponent implements OnInit {
       });
       this.postDetails.push({
         postId: this.posts[i].postId,
+        postBy: this.posts[i].postBy,
         loginUser: this.profileInfo.userId,
         caption: this.posts[i].caption,
         likes: this.posts[i].likes,

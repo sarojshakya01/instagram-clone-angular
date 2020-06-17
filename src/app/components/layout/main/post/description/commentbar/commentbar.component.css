@@ -1,0 +1,20 @@
+.viewall {
+  margin-bottom: 4px;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.viewall a {
+  background: 0 0;
+  border: 0;
+  color: #8e8e8e;
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}

@@ -34,6 +34,7 @@ import { CommentbarComponent } from './components/layout/main/post/description/c
 import { CommentComponent } from './components/layout/main/post/description/commentbar/comment/comment.component';
 import { SuggestionRowComponent } from './components/layout/main/sidepanel/suggestion/suggestion-row/suggestion-row.component';
 import { StoryRowComponent } from './components/layout/main/sidepanel/side-story/story-row/story-row.component';
+import { SearchSuggestionComponent } from './components/layout/nav/search/search-suggestion/search-suggestion.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { StoryRowComponent } from './components/layout/main/sidepanel/side-story
     CommentComponent,
     SuggestionRowComponent,
     StoryRowComponent,
+    SearchSuggestionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

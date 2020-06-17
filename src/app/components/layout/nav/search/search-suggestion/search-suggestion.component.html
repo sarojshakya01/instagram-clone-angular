@@ -1,0 +1,19 @@
+<a href="/{{ suggestion.userId }}/" class="search-result-a">
+  <div class="search-result-row">
+    <div class="search-result-photo">
+      <canvas height="42" width="42"></canvas>
+      <span>
+        <img
+          alt="{{ suggestion.userId }}'s profile pic'"
+          src="{{ imgUrl + suggestion.profilePhoto }}"
+        />
+      </span>
+    </div>
+    <div class="search-result-label">
+      <div class="search-result-userid">
+        <span>{{ suggestion.userId }}</span>
+      </div>
+      <span class="search-result-username">{{ suggestion.userName }}</span>
+    </div>
+  </div>
+</a>

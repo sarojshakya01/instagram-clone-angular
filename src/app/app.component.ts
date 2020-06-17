@@ -27,7 +27,8 @@ export class AppComponent {
     this.clickNav = 'profile';
   };
 
-  public handleClickNav = (navName) => {
+  public handleClickNav = (param) => {
+    const navName = param[1];
     if (navName === 'home') {
       this.clickNav = 'home';
     } else if (navName === 'direct') {
@@ -40,6 +41,10 @@ export class AppComponent {
       this.clickNav = 'profile';
     } else {
       this.clickNav = '';
+    }
+
+    if (navName !== 'home') {
+      param[0].preventDefault();
     }
   };
 }

@@ -5,7 +5,9 @@
     type="text"
     autoCapitalize="none"
     placeholder="Search"
-    (blur)="onBlurInput()"
+    (blur)="handleBlurInput()"
+    (keyup)="handleKeyup($event)"
+    [value]="searchKey"
   />
   <span *ngIf="clickInput" class="nav-search-icon-left"></span>
   <div
@@ -13,10 +15,25 @@
     class="nav-search-clear-icon"
     role="button"
     tabIndex="0"
-    onClick="{this.handleBlur}"
+    onClick="handleBlurInput()"
   ></div>
   <div *ngIf="clickInput && !dataFetched" class="nav-search-loader">
     <img alt="loader" src="/assets/img/loader.gif" />
+  </div>
+  <div *ngIf="suggestions.length > 0">
+    <div>
+      <div class="search-result-arrow"></div>
+      <div class="search-result-container">
+        <div class="search-result">
+          <app-search-suggestion
+            *ngFor="let suggestion of suggestions; let i = index"
+            [suggestion]="suggestion"
+            [imgUrl]="imgUrl"
+            (click)="clickSuggestion($event)"
+          ></app-search-suggestion>
+        </div>
+      </div>
+    </div>
   </div>
   <div
     *ngIf="!clickInput"

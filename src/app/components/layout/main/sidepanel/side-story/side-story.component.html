@@ -4,7 +4,9 @@
       <div class="story-header-label-content">{{ "Stories" }}</div>
     </div>
     <a class="story-watch-all" href="/#">
-      <div class="story-watch-all-content">{{ "Watch All" }}</div>
+      <div class="story-watch-all-content" (click)="handleWatchAll()">
+        {{ watchAll ? "Watch Unseen" : "Watch All" }}
+      </div>
     </a>
   </div>
   <div class="story-body-container">
@@ -21,7 +23,7 @@
 
         <div *ngIf="fetched" class="story-body">
           <app-story-row
-            *ngFor="let story of stories; let i = index"
+            *ngFor="let story of dispStories; let i = index"
             class="story-row"
             [story]="story"
             [index]="i"

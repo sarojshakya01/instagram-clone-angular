@@ -37,7 +37,8 @@ export class IconsComponent implements OnInit {
   }
 
   public handleClickNav(e, navName) {
-    this.handleNavClickEvent.emit(navName);
-    e.preventDefault();
+    const param = [e, navName];
+    this.handleNavClickEvent.emit(param);
+    // e.preventDefault();
   }
 }
