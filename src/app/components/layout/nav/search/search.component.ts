@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Search, SearchResponse } from 'src/app/modules/Search';
+import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-search',
@@ -10,76 +12,9 @@ export class SearchComponent implements OnInit {
   public dataFetched: boolean = false;
   public searchKey: string = '';
   public imgUrl: string = '/assets/img/userdata/';
-  public suggestions: Array<Object> = [];
-  public userData: Array<Object> = [
-    {
-      userId: 'sarojsh01',
-      userName: 'Saroj Shakya',
-      profilePhoto: 'sarojsh01_profilephoto.jpg',
-    },
-    {
-      userId: 'pooza_singh91',
-      userName: 'Pooja Singh',
-      profilePhoto: 'pooza_singh91_profilephoto.jpg',
-    },
-    {
-      userId: 'bidhan.sthapit',
-      userName: 'Bidhan Sthapit',
-      profilePhoto: 'bidhan.sthapit_profilephoto.jpg',
-    },
-    {
-      userId: 'rebatov',
-      userName: 'Bishal Dangal',
-      profilePhoto: 'rebatov_profilephoto.jpg',
-    },
-    {
-      userId: 'elna_stha',
-      userName: 'Alina Shrestha',
-      profilePhoto: 'elna_stha_profilephoto.jpg',
-    },
-    {
-      userId: '_thehasinaaykahs_',
-      userName: 'Hasina Shakya',
-      profilePhoto: '_thehasinaaykahs__profilephoto.jpg',
-    },
-    {
-      userId: 'ukg_umesh',
-      userName: 'Umesh Kant Ghimire',
-      profilePhoto: 'ukg_umesh_profilephoto.jpg',
-    },
-    {
-      userId: 'shrinkhala_',
-      userName: 'Shrinkhala Khatiwada',
-      profilePhoto: 'shrinkhala__profilephoto.jpg',
-    },
-    {
-      userId: 'paraskhadka77',
-      userName: 'Paras Khadka',
-      profilePhoto: 'paraskhadka77_profilephoto.jpg',
-    },
-    {
-      userId: 'sandeep_lamichhane25',
-      userName: 'Sandeep Lamichhane',
-      profilePhoto: 'sandeep_lamichhane25_profilephoto.jpg',
-    },
-    {
-      userId: 'rajeshhamal',
-      userName: 'Rajesh Hamal',
-      profilePhoto: 'rajeshhamal_profilephoto.jpg',
-    },
-    {
-      userId: 'rabi.lamichhane',
-      userName: 'Rabi Lamichhane',
-      profilePhoto: 'rabi.lamichhane_profilephoto.jpg',
-    },
-    {
-      userId: 'baburam.bhattarai',
-      userName: 'Baburam Bhattarai',
-      profilePhoto: 'baburam.bhattarai_profilephoto.jpg',
-    },
-  ];
+  public suggestions: Search[] = [];
 
-  constructor() {}
+  constructor(private searchService: SearchService) {}
 
   ngOnInit(): void {}
 
@@ -98,12 +33,20 @@ export class SearchComponent implements OnInit {
   public handleKeyup(e) {
     this.dataFetched = false;
     this.searchKey = e.target.value;
-    this.suggestions = this.userData;
-    const regex = new RegExp(this.searchKey);
-    this.suggestions = this.userData.filter(
-      (key) => regex.test(key['userId']) || regex.test(key['userId'])
-    );
-    this.dataFetched = true;
+    this.searchService
+      .getSuggestions(e.target.value)
+      .subscribe((suggestions) => {
+        this.dataFetched = true;
+        this.suggestions;
+        this.suggestions.splice(0, this.suggestions.length);
+        for (let i = 0; i < suggestions.length; i++) {
+          this.suggestions.push({
+            userId: suggestions[i].useid,
+            userName: suggestions[i].username,
+            profilePhoto: suggestions[i].profilephoto,
+          });
+        }
+      });
   }
 
   public clickSuggestion(e) {

@@ -6,9 +6,9 @@
         class="igpost dark-off"
         id="{{ i }}"
       >
-        <app-header [postByInfo]="postByInfo[i]"></app-header>
+        <app-header [postByInfo]="postByInfos[i]"></app-header>
         <app-photo
-          [photo]="postedPhoto[i]"
+          [photo]="postedPhotos[i]"
           (clickPhotoEvent)="handleClickPhoto($event)"
         ></app-photo>
         <app-description
