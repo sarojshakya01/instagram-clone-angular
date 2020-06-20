@@ -1,26 +1,29 @@
 <div class="igpost-description">
   <app-iconbar
-    [likePost]="postDetails.likes.indexOf(postDetails.loginUser) > -1"
+    [likePost]="postDetail.likes.indexOf(postDetail.loginUser) > -1"
     [likeIcon]="likeIcon"
-    [index]="postDetails.postId"
+    [index]="postDetail.postId"
     (clickPostEvent)="clickPostLike($event)"
   ></app-iconbar>
-  <app-likebar [likes]="postDetails.likes"></app-likebar>
+  <app-likebar [likes]="postDetail.likes"></app-likebar>
   <div class="caption-comment">
     <app-captionbar
-      [caption]="postDetails.caption"
-      [postBy]="postDetails.postBy"
+      [caption]="postDetail.caption"
+      [postBy]="postDetail.postBy"
     ></app-captionbar>
     <app-commentbar
-      [comments]="postDetails.comments"
-      [postBy]="postDetails.postBy"
-      [loginUser]="postDetails.loginUser"
+      [comments]="visibleComments"
+      [commentCount]="postDetail.comments.length"
+      [clickViewAll]="clickViewAll"
+      [postSummary]="postSummary"
       [likeIcon]="likeIcon"
+      (handleViewAllCommentsEvent)="handleViewAllComments($event)"
+      (handleDeleteCommentEvent)="handleDeleteComment($event)"
     ></app-commentbar>
   </div>
   <app-timebar
     class="igpost-time"
-    [postTime]="postDetails.postTime"
+    [postTime]="postDetail.postTime"
   ></app-timebar>
   <app-add-comment
     [fetched]="fetched"

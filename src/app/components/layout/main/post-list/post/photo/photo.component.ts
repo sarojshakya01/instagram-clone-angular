@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-photo',
@@ -6,30 +7,30 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['/src/app/app.component.css', './photo.component.css'],
 })
 export class PhotoComponent implements OnInit {
-  @Input() photo;
-  @Output() clickPhotoEvent = new EventEmitter();
+  @Input() postedPhoto;
+  @Output() handleDoubleClickPhotoEvent = new EventEmitter();
 
   public imgUrl: string = '/assets/img/userdata/';
   public photoIndex: number = 0;
 
-  constructor() {
+  constructor(private postService: PostService) {
     this.photoIndex = 0;
   }
 
   ngOnInit(): void {}
 
   public doubleClickPost(e): void {
-    this.clickPhotoEvent.emit(this.photo.postId);
+    this.handleDoubleClickPhotoEvent.emit(e);
   }
 
-  public prevPhoto(): void {
+  public handlePrevPhoto(): void {
     if (this.photoIndex > 0) {
       this.photoIndex = this.photoIndex - 1;
     }
   }
 
-  public nextPhoto(): void {
-    if (this.photoIndex + 1 < this.photo.photo.length) {
+  public handleNextPhoto(): void {
+    if (this.photoIndex + 1 < this.postedPhoto.photo.length) {
       this.photoIndex = this.photoIndex + 1;
     }
   }

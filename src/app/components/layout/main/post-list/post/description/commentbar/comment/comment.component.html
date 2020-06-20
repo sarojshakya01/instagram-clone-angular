@@ -25,7 +25,7 @@
   </div>
   <span class="comment-like-span">
     <div class="comment-like">
-      <button type="button" (click)="clickLikeComment()">
+      <button type="button" (click)="handleLikeComment()">
         <svg
           height="12"
           viewBox="0 0 48 48"
@@ -42,11 +42,14 @@
     </div>
   </span>
   <span
-    *ngIf="postBy === loginUser || comment.commentBy === loginUser"
+    *ngIf="
+      postSummary.postBy === postSummary.loginUser ||
+      comment.commentBy === postSummary.loginUser
+    "
     class="comment-delete-span"
   >
     <div class="comment-delete">
-      <button type="button" (click)="clickDeleteComment()">
+      <button type="button" (click)="handleDeleteComment()">
         <svg height="24" viewBox="0 0 24 24" width="24">
           <path
             clicp-rule="evenodd"

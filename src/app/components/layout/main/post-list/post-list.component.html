@@ -1,0 +1,18 @@
+<div id="igpost-main">
+  <div class="">
+    <div class="igpost-container">
+      <article
+        *ngFor="let post of modifiedPosts; let i = index"
+        class="igpost dark-off"
+        id="{{ i }}"
+      >
+        <app-post [post]="post" [profileInfo]="profileInfo"></app-post>
+      </article>
+    </div>
+  </div>
+</div>
+<div *ngIf="!fetched" className="footer-igpost">
+  <div className="footer-igpost-inner">
+    <img alt="Loading..." src="/assets/img/loader.gif" height="32" width="32" />
+  </div>
+</div>

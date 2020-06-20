@@ -1,0 +1,437 @@
+[
+  {
+    "userid": "sarojsh01",
+    "password": "12345",
+    "username": "Saroj Shakya",
+    "email": "sarojsh01@gmail.com",
+    "gender": "male",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "sarojsh01_profilephoto.jpg",
+    "followedby": [
+      { "userid": "pooza_singh91" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "rebatov" },
+      { "userid": "elna_stha" },
+      { "userid": "ukg_ummesh" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "rajeshhamal" },
+      { "userid": "paraskhadka77" }
+    ],
+    "follows": [
+      { "userid": "pooza_singh91" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "rebatov" },
+      { "userid": "elna_stha" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "ukg_umesh" },
+      { "userid": "shrinkhala_" },
+      { "userid": "rajeshhamal" },
+      { "userid": "paraskhadka77" }
+    ],
+    "storydate": "Tue May 05 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "Sr. Software Engineer \nLecturer and Project Supervisor @ TU, IOE \nLecturer @ SchEMS College \nTrainer @ DBEE;",
+      "website": "www.youtube.com/sarojshakya"
+    }
+  },
+  {
+    "userid": "pooza_singh91",
+    "password": "12345",
+    "username": "Pooja Singh",
+    "email": "poojasingh@gmail.com",
+    "gender": "female",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "pooza_singh91_profilephoto.jpg",
+    "followedby": [
+      { "userid": "sarojsh01" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "ukg_umesh" }
+    ],
+    "follows": [
+      { "userid": "sarojsh01" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "ukg_umesh" },
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "storydate": "Tue May 05 2020 00:03:30 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "Believe in yourself",
+      "website": ""
+    }
+  },
+  {
+    "userid": "bidhan.sthapit",
+    "password": "12345",
+    "username": "Bidhan Sthapit",
+    "email": "bidhan.sthapit@gmail.com",
+    "gender": "male",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "bidhan.sthapit_profilephoto.jpg",
+    "followedby": [
+      { "userid": "sarojsh01" },
+      { "userid": "rebatov" },
+      { "userid": "elna_stha" }
+    ],
+    "follows": [
+      { "userid": "sarojsh01" },
+      { "userid": "rebatov" },
+      { "userid": "elna_stha" },
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "storydate": "Tue May 05 2020 01:19:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "Learn and Grow",
+      "website": ""
+    }
+  },
+  {
+    "userid": "rebatov",
+    "password": "12345",
+    "username": "Bishal Dangal",
+    "email": "bishal.dangal@gmail.com",
+    "gender": "male",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "rebatov_profilephoto.jpg",
+    "followedby": [
+      { "userid": "sarojsh01" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "elna_stha" }
+    ],
+    "follows": [
+      { "userid": "sarojsh01" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "elna_stha" },
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "storydate": "Tue May 05 2020 00:55:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "Just another bliss junkie.",
+      "website": ""
+    }
+  },
+  {
+    "userid": "elna_stha",
+    "password": "12345",
+    "username": "Alina Shrestha",
+    "email": "alina.shrestha@gmail.com",
+    "gender": "female",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "elna_stha_profilephoto.jpg",
+    "followedby": [
+      { "userid": "sarojsh01" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "rebatov" }
+    ],
+    "follows": [
+      { "userid": "sarojsh01" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "rebatov" },
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "storydate": "Tue May 05 2020 00:02:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "",
+      "website": ""
+    }
+  },
+  {
+    "userid": "_thehasinaaykahs_",
+    "password": "12345",
+    "username": "Hasina Shakya",
+    "email": "_thehasinaaykahs_@gmail.com",
+    "gender": "female",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "_thehasinaaykahs__profilephoto.jpg",
+    "followedby": [
+      { "userid": "sarojsh01" },
+      { "userid": "pooza_singh91" },
+      { "userid": "ukg_umesh" }
+    ],
+    "follows": [
+      { "userid": "sarojsh01" },
+      { "userid": "pooza_singh91" },
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "storydate": "Tue May 05 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "11.11",
+      "website": ""
+    }
+  },
+  {
+    "userid": "ukg_umesh",
+    "password": "12345",
+    "username": "Umesh Kant Ghimire",
+    "email": "ukg_umesh@gmail.com",
+    "gender": "male",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "ukg_umesh_profilephoto.jpg",
+    "followedby": [
+      { "userid": "sarojsh01" },
+      { "userid": "pooza_singh91" },
+      { "userid": "_thehasinaaykahs_" }
+    ],
+    "follows": [
+      { "userid": "sarojsh01" },
+      { "userid": "pooza_singh91" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "storydate": "Tue May 05 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "",
+      "website": ""
+    }
+  },
+  {
+    "userid": "shrinkhala_",
+    "password": "12345",
+    "username": "Shrinkhala Khatiwada",
+    "email": "shrinkha_@gmail.com",
+    "gender": "female",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "shrinkhala__profilephoto.jpg",
+    "followedby": [
+      { "userid": "sarojsh01" },
+      { "userid": "rebatov" },
+      { "userid": "elna_Stha" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "ukg_umesh" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "pooza_singh91" },
+      { "userid": "rajeshhamal" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "follows": [
+      { "userid": "rajeshhamal" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "storydate": "Tue May 05 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "Discovering",
+      "website": ""
+    }
+  },
+  {
+    "userid": "paraskhadka77",
+    "password": "12345",
+    "username": "Paras Khadka",
+    "email": "paraskhadka77@gmail.com",
+    "gender": "male",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "paraskhadka77_profilephoto.jpg",
+    "followedby": [
+      { "userid": "sarojsh01" },
+      { "userid": "rebatov" },
+      { "userid": "elna_Stha" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "ukg_umesh" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "pooza_singh91" },
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "follows": [
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "baburam.bhattarai" },
+      { "userid": "sarojsh01" }
+    ],
+    "storydate": "Tue May 05 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "it’s NOW or NEVER !!!",
+      "website": "paraskhadka.com"
+    }
+  },
+  {
+    "userid": "sandeep_lamichhane25",
+    "password": "12345",
+    "username": "Sandeep Lamichhane",
+    "email": "sandeep_lamichhane25@gmail.com",
+    "gender": "male",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "sandeep_lamichhane25_profilephoto.jpg",
+    "followedby": [
+      { "userid": "rebatov" },
+      { "userid": "elna_Stha" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "ukg_umesh" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "pooza_singh91" },
+      { "userid": "shrinkhala_" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "follows": [
+      { "userid": "shrinkhala_" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "storydate": "Tue May 05 2020 00:45:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "• Professional Cricketer of Nepal🇳🇵",
+      "website": ""
+    }
+  },
+  {
+    "userid": "rajeshhamal",
+    "password": "12345",
+    "username": "Rajesh Hamal",
+    "email": "rajeshhamal@gmail.com",
+    "gender": "male",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "rajeshhamal_profilephoto.jpg",
+    "followedby": [
+      { "userid": "sarojsh01" },
+      { "userid": "rebatov" },
+      { "userid": "elna_Stha" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "ukg_umesh" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "pooza_singh91" },
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "follows": [
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "storydate": "Tue May 05 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "",
+      "website": ""
+    }
+  },
+  {
+    "userid": "rabi.lamichhane",
+    "password": "12345",
+    "username": "Rabi Lamichhane",
+    "email": "rabi.lamichhane@gmail.com",
+    "gender": "male",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "rabi.lamichhane_profilephoto.jpg",
+    "followedby": [
+      { "userid": "rebatov" },
+      { "userid": "elna_Stha" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "ukg_umesh" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "pooza_singh91" },
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "follows": [
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "paraskhadka77" },
+      { "userid": "baburam.bhattarai" }
+    ],
+    "storydate": "Tue May 05 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "Television Presentor \n Sidha Kura Janata Sanga",
+      "website": "news24nepal.com"
+    }
+  },
+  {
+    "userid": "baburam.bhattarai",
+    "password": "12345",
+    "username": "Baburam Bhattarai",
+    "email": "baburam.bhattarai@gmail.com",
+    "gender": "female",
+    "country": "Nepal",
+    "createdate": "Wed Jan 01 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "profilephoto": "baburam.bhattarai_profilephoto.jpg",
+    "followedby": [
+      { "userid": "rebatov" },
+      { "userid": "elna_Stha" },
+      { "userid": "bidhan.sthapit" },
+      { "userid": "ukg_umesh" },
+      { "userid": "_thehasinaaykahs_" },
+      { "userid": "pooza_singh91" },
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" }
+    ],
+    "follows": [
+      { "userid": "shrinkhala_" },
+      { "userid": "sandeep_lamichhane25" },
+      { "userid": "rajeshhamal" },
+      { "userid": "rabi.lamichhane" },
+      { "userid": "paraskhadka77" }
+    ],
+    "storydate": "Tue May 05 2020 00:00:00 GMT+0545 (Nepal Time)",
+    "bio": {
+      "intro": "Ex Prime Minister of Nepal",
+      "website": "baburambhattarai.com"
+    }
+  }
+]

@@ -4,10 +4,14 @@
     class="story-top story-container dark-off"
     [profileInfo]="profileInfo"
   ></app-story>
-  <app-post class="igpost-outer" [profileInfo]="profileInfo"></app-post>
+  <app-post-list [profileInfo]="profileInfo"></app-post-list>
 </section>
 <section *ngIf="windowWidth > 1056" class="main-section-2">
-  <app-post class="igpost-outer" [profileInfo]="profileInfo"></app-post>
+  <app-post-list
+    [profileInfo]="profileInfo"
+    class="igpost-outer"
+  ></app-post-list>
+
   <div class="post-story-gap"></div>
   <app-sidepanel
     [profileInfo]="profileInfo"

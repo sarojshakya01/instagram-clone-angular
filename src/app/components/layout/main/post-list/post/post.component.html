@@ -1,0 +1,12 @@
+<div>
+  <app-header [postByInfo]="postByInfo"></app-header>
+  <app-photo
+    [postedPhoto]="postedPhoto"
+    (handleDoubleClickPhotoEvent)="handleDoubleClickPhoto($event)"
+  ></app-photo>
+  <app-description
+    [postDetail]="postDetail"
+    (handlePostLikeEvent)="handleLikePost($event)"
+  ></app-description>
+  <app-post-option></app-post-option>
+</div>

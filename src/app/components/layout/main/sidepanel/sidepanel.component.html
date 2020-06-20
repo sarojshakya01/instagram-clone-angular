@@ -4,7 +4,7 @@
     (setClickProfileEvent)="setClickProfile()"
   ></app-side-profile>
   <app-side-story></app-side-story>
-  <app-suggestion></app-suggestion>
+  <app-suggestion [loginUser]="profileInfo.userId"></app-suggestion>
 
   <div class="footer-panel">
     <nav class="dark-off">

@@ -1,4 +1,4 @@
-import { Comment } from 'src/app/modules/Comment';
+import { Comment, CommentResponse } from 'src/app/modules/Comment';
 
 export class Post {
   postid: number;
@@ -8,7 +8,7 @@ export class Post {
   location: string;
   caption: string;
   likes: Array<Object>;
-  comments: Comment;
+  comments: CommentResponse;
   posttime: string;
 }
 
@@ -18,7 +18,7 @@ export class PostDetail {
   loginUser: string;
   caption: string;
   likes: Array<Object>;
-  comments: Comment;
+  comments: any;
   postTime: string;
 }
 
@@ -26,6 +26,7 @@ export class PostedPhoto {
   postId: number;
   postBy: string;
   photo: Array<Object>;
+  likes: Array<Object>;
 }
 
 export class PostedByInfo {

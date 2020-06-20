@@ -1,0 +1,18 @@
+<div>
+  <div *ngIf="commentCount > 3" class="viewall" (click)="handleViewAll($event)">
+    <a *ngIf="clickViewAll" href="/#">Show only top comments</a>
+    <a *ngIf="!clickViewAll" href="/#">
+      View all <span>{{ commentCount }}</span>
+      comments
+    </a>
+  </div>
+
+  <app-comment
+    *ngFor="let comment of comments; let i = index"
+    [attr.d]="comment.commentId"
+    [comment]="comment"
+    [likeIcon]="likeIcon"
+    [postSummary]="postSummary"
+    (handleDeleteCommentEvent)="handleDeleteComment($event)"
+  ></app-comment>
+</div>

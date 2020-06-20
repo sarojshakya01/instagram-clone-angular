@@ -3,8 +3,6 @@ export class Comment {
   mention: string;
   comment: string;
   likes: Array<Object>;
-  comments: Comment;
-  posttime: string;
 }
 
 export class CommentResponse {
@@ -12,6 +10,4 @@ export class CommentResponse {
   mention: string;
   comment: string;
   likes: Array<Object>;
-  comments: Comment;
-  posttime: string;
 }

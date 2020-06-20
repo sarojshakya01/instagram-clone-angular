@@ -18,8 +18,8 @@ export class SuggestionService {
   constructor(private http: HttpClient) {}
 
   // Get suggestions
-  getSuggestions(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.suggestionsUrl}`);
+  getSuggestions(userId: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.suggestionsUrl}?userId=${userId}`);
   }
 
   //Add Story

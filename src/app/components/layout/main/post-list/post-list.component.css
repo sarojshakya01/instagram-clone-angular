@@ -1,0 +1,15 @@
+.igpost-container {
+  flex-direction: column;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.igpost {
+  padding: 0;
+  margin-bottom: 60px;
+  border-radius: 3px;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  background-color: rgba(var(--d87, 255, 255, 255), 1);
+  margin-left: -1px;
+  margin-right: -1px;
+}
