@@ -6,9 +6,10 @@ const app = express();
 
 const router = express.Router();
 
-// const uri = "mongodb+srv://sarojsh:sarojsh@cluster0-jb3wc.gcp.mongodb.net/";
+const uri =
+  "mongodb+srv://sarojsh:saroj123@cluster0.jb3wc.mongodb.net/Instagram?retryWrites=true&w=majority";
 
-const uri = "mongodb://127.0.0.1:27017/";
+// const uri = "mongodb://127.0.0.1:27017/";
 
 const mongocli = mongo.MongoClient;
 
@@ -261,7 +262,7 @@ app.get("/story", (request, response) => {
                 createdate: 0,
                 followedby: 0,
                 follows: 0,
-				bio: 0,
+                bio: 0,
               })
               .toArray((err, result) => {
                 if (err) throw err;
@@ -325,7 +326,7 @@ app.get("/suggestion", (request, response) => {
               createdate: 0,
               follows: 0,
               storydate: 0,
-              bio:0,
+              bio: 0,
             })
             .toArray((err, result) => {
               if (err) throw err;
