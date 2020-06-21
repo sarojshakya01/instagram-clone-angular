@@ -7,7 +7,7 @@
       (click)="clickProfile($event)"
     >
       <canvas height="60" width="60"></canvas>
-      <a href="/{{ profileInfo.userId }}/">
+      <a routerLink="/{{ profileInfo.userId }}/">
         <img
           alt="{{ profileInfo.userId }}'s Profile pic"
           src="{{ profileInfo.profilePhoto }}"
@@ -16,7 +16,7 @@
     </div>
     <div class="profile-label">
       <div class="profile-id" (click)="clickProfile($event)">
-        <a href="/{{ profileInfo.userId }}/">{{ profileInfo.userId }}</a>
+        <a routerLink="/{{ profileInfo.userId }}/">{{ profileInfo.userId }}</a>
       </div>
       <div class="profile-name">{{ profileInfo.userName }}</div>
     </div>

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Suggestion } from 'src/app/modules/Suggestion';
 import { SuggestionService } from 'src/app/services/suggestion.service';
 
 @Component({
@@ -39,7 +38,7 @@ export class SuggestionComponent implements OnInit {
             commonFollowedBy: [],
           };
 
-          for (let j = 0; j < suggestions[i].followedby.length; j++) {
+          for (let j = 0; j < suggestions[i].followedby['length']; j++) {
             if (follows.indexOf(suggestions[i].followedby[j].userid) !== -1) {
               suggestion.commonFollowedBy.push(
                 suggestions[i].followedby[j].userid
@@ -60,7 +59,7 @@ export class SuggestionComponent implements OnInit {
               this.suggestions[i].commonFollowedBy[0] +
               ' + ' +
               (this.suggestions[i].commonFollowedBy.length - 1).toString() +
-              'more';
+              ' more';
           }
 
           this.followLabel.push(

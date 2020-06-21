@@ -23,7 +23,7 @@ export class SuggestionRowComponent implements OnInit {
         commonFollowedBy[0] +
         ' + ' +
         (commonFollowedBy.length - 1).toString() +
-        'more';
+        ' more';
     }
 
     this.followLabel = this.suggestion.isFollowdBy

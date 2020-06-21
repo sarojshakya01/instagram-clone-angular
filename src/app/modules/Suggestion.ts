@@ -1,8 +1,9 @@
 export class SuggestionResponse {
-  useid: string;
+  userid: string;
   username: string;
   profilephoto: string;
-  followedby: Array<Object>;
+  followedby: any;
+  follows: any;
 }
 
 export class Suggestion {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { SearchResponse } from '../modules/Search';
+import { UserResponse } from '../modules/User';
 import { Observable } from 'rxjs';
 
 const httpOptions = {
@@ -12,13 +12,13 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root',
 })
-export class SearchService {
-  private apiUrl: string = 'http://localhost:3001/search';
+export class UserService {
+  private apiUrl: string = 'http://localhost:3001/userDetails';
 
   constructor(private http: HttpClient) {}
 
-  // Get search suggestion
-  getSearchSuggestions(query: string): Observable<SearchResponse[]> {
-    return this.http.get<SearchResponse[]>(`${this.apiUrl}?q=${query}`);
+  // Get user profile
+  getUserProfile(userId: string): Observable<UserResponse[]> {
+    return this.http.get<UserResponse[]>(`${this.apiUrl}?userId=${userId}`);
   }
 }

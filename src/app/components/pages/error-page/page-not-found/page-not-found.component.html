@@ -1,0 +1,12 @@
+<main class="error-main" role="main" (window:resize)="handleResize($event)">
+  <div class="error-inner-main">
+    <h2>Sorry, this page isn't available.</h2>
+    <p>
+      {{
+        "The link you followed may be broken, or the page may have been removed."
+      }}
+      <a href="/" tabindex="0">{{ "Go back to Instagram." }}</a>
+    </p>
+  </div>
+</main>
+<app-footer *ngIf="windowWidth > 1056"></app-footer>

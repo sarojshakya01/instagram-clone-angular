@@ -1,0 +1,149 @@
+<main id="my-profile" class="profile-page dark-off">
+  <div class="profile-page-inner">
+    <header>
+      <div class="profile-photo">
+        <div class="profile-photo-inner">
+          <div class="profile-photo-content">
+            <button title="Change Profile Pic">
+              <img
+                alt="Change Profile Pic"
+                src="{{ userProfile.profilePhoto }}"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="profile-setting dark-off">
+          <h2>{{ userProfile.userId }}</h2>
+          <a *ngIf="loginUser === userProfile.userId" href="/accounts/edit/">
+            <button type="button" (click)="handleEditProfile()">
+              Edit Profile
+            </button>
+          </a>
+          <div *ngIf="loginUser === userProfile.userId" class="setting-icon">
+            <button type="button">
+              <svg
+                aria-label="Options"
+                fill="#262626"
+                height="24"
+                viewBox="0 0 48 48"
+                width="24"
+              >
+                <path
+                  clipRule="evenodd"
+                  [attr.d]="settingIcon"
+                  fillRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <span>
+              <span>{{ userProfile.posts.length }} </span>
+              posts
+            </span>
+          </li>
+          <li>
+            <a href="/sarojsh01/followers/">
+              <span>{{ userProfile.followedBy.length }} </span>
+              followers
+            </a>
+          </li>
+          <li>
+            <a href="/sarojsh01/followers/">
+              <span>{{ userProfile.follows.length }} </span>
+              following
+            </a>
+          </li>
+        </ul>
+        <div class="intro">
+          <h3>{{ userProfile.userName }}</h3>
+          <br />
+          <span>{{ userProfile.bio.intro }}</span>
+          <a href="http://{{ userProfile.bio.website }}">{{
+            userProfile.bio.website
+          }}</a>
+          <!-- <a href="/website?q=">{{userProfile.bio.website}}</a> -->
+        </div>
+      </section>
+    </header>
+    <div class="highlight"></div>
+    <div class="menu">
+      <a class="current" href="/{{ userProfile.userId }}/">
+        posts
+      </a>
+      <a href="/{{ userProfile.userId }}/channel">igtv</a>
+      <a href="/{{ userProfile.userId }}/saved">saved</a>
+      <a href="/{{ userProfile.userId }}/tagged">tagged</a>
+    </div>
+    <div class="content">
+      <article>
+        <div>
+          <div class="row-container">
+            <div class="content-row">
+              <div
+                *ngIf="userProfile.posts[0]"
+                class="photo"
+                height="293"
+                width="293"
+              >
+                <img
+                  alt="post"
+                  height="100%"
+                  width="100%"
+                  src="{{ imgUrl + this.userProfile.posts[0]['photo'][0] }}"
+                />
+              </div>
+
+              <div class="photo" height="293" width="293">
+                <img
+                  alt="post"
+                  height="100%"
+                  width="100%"
+                  src="{{ imgUrl }}sarojsh01_photo2.jpg"
+                />
+              </div>
+              <div class="photo" height="293" width="293">
+                <img
+                  alt="post"
+                  height="100%"
+                  width="100%"
+                  src="{{ imgUrl }}sarojsh01_photo3.jpg"
+                />
+              </div>
+            </div>
+            <div class="content-row">
+              <div class="photo" height="293" width="293">
+                <img
+                  alt="post"
+                  height="100%"
+                  width="100%"
+                  src="{{ imgUrl }}rebatov_photo1.jpg"
+                />
+              </div>
+              <div class="photo" height="293" width="293">
+                <img
+                  alt="post"
+                  height="100%"
+                  width="100%"
+                  src="{{ imgUrl }}rebatov_photo2.jpg"
+                />
+              </div>
+              <div class="photo" height="293" width="293">
+                <img
+                  alt="post"
+                  height="100%"
+                  width="100%"
+                  src="{{ imgUrl }}bidhan.sthapit_photo1.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>

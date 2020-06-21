@@ -14,7 +14,7 @@ export class StoryIconComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     const id = 'story-canvas-' + this.index;
     let canvas = <HTMLCanvasElement>document.getElementById(id);
     if (canvas !== null) {

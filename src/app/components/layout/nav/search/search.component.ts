@@ -34,7 +34,7 @@ export class SearchComponent implements OnInit {
     this.dataFetched = false;
     this.searchKey = e.target.value;
     this.searchService
-      .getSuggestions(e.target.value)
+      .getSearchSuggestions(e.target.value)
       .subscribe((suggestions) => {
         this.dataFetched = true;
         this.suggestions;

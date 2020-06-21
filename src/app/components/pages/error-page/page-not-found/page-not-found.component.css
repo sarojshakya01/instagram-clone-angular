@@ -1,0 +1,29 @@
+.error-main {
+  background-color: #fafafa;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+.error-inner-main {
+  text-align: center;
+  padding: 20px 40px;
+}
+
+.error-inner-main > h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.error-inner-main > p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 16px 0;
+}

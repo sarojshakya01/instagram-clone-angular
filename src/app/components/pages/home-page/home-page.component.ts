@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css', '../../../app.component.css'],
 })
-export class AppComponent {
+export class HomePageComponent implements OnInit {
   public windowWidth: number = window.innerWidth;
+
   public profileInfo = {
     userId: 'sarojsh01',
     userName: 'Saroj Shakya',
@@ -16,17 +17,7 @@ export class AppComponent {
   public clickNav: string = 'home';
   public inbox: number = 5;
 
-  ngOnInit(): void {
-    const path = window.location.pathname;
-
-    let activeIcon = 'home';
-    if (path.indexOf('/direct') > -1) activeIcon = 'direct';
-    else if (path.indexOf('/explore') > -1) activeIcon = 'explore';
-    else if (path.indexOf('/activity') > -1) activeIcon = 'activity';
-    else if (path.indexOf('/profile') > -1) activeIcon = 'profile';
-
-    this.clickNav = activeIcon;
-  }
+  ngOnInit(): void {}
 
   public handleResize(e) {
     this.windowWidth = e.target.innerWidth;
@@ -50,6 +41,10 @@ export class AppComponent {
       this.clickNav = 'profile';
     } else {
       this.clickNav = '';
+    }
+
+    if (navName !== 'home') {
+      param[0].preventDefault();
     }
   };
 }

@@ -59,7 +59,7 @@ export class StoryRowComponent implements OnInit {
     }
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     const id = 'story-canvas-' + this.index;
     let canvas = <HTMLCanvasElement>document.getElementById(id);
 

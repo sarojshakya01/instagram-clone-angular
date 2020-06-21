@@ -13,21 +13,14 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class SuggestionService {
-  private suggestionsUrl: string = 'http://localhost:3001/suggestion';
+  private apiUrl: string = 'http://localhost:3001/suggestion';
 
   constructor(private http: HttpClient) {}
 
   // Get suggestions
-  getSuggestions(userId: string): Observable<any[]> {
-    return this.http.get<any[]>(`${this.suggestionsUrl}?userId=${userId}`);
-  }
-
-  //Add Story
-  addStory(Story: SuggestionResponse): Observable<SuggestionResponse> {
-    return this.http.post<SuggestionResponse>(
-      this.suggestionsUrl,
-      Story,
-      httpOptions
+  getSuggestions(userId: string): Observable<SuggestionResponse[]> {
+    return this.http.get<SuggestionResponse[]>(
+      `${this.apiUrl}?userId=${userId}`
     );
   }
 }

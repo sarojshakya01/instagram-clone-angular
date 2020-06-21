@@ -13,17 +13,17 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class StoryService {
-  private storiesUrl: string = 'http://localhost:3001/story';
+  private apiUrl: string = 'http://localhost:3001/story';
 
   constructor(private http: HttpClient) {}
 
   // Get stories
   getStories(): Observable<StoryResponse[]> {
-    return this.http.get<StoryResponse[]>(`${this.storiesUrl}`);
+    return this.http.get<StoryResponse[]>(`${this.apiUrl}`);
   }
 
   //Add Story
   addStory(Story: StoryResponse): Observable<StoryResponse> {
-    return this.http.post<StoryResponse>(this.storiesUrl, Story, httpOptions);
+    return this.http.post<StoryResponse>(this.apiUrl, Story, httpOptions);
   }
 }

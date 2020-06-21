@@ -1,15 +1,10 @@
-<div class="root-inner" (window:resize)="onResize($event)">
-  <app-main
-    class="dark-off"
-    [windowWidth]="windowWidth"
-    [profileInfo]="profileInfo"
-    (setClickProfileEvent)="setClickProfile()"
-  ></app-main>
-  <app-footer *ngIf="windowWidth <= 1056"></app-footer>
+<div class="root-inner" (window:resize)="handleResize($event)">
   <app-nav
     [profileInfo]="profileInfo"
     [inbox]="inbox"
     [clickNav]="clickNav"
     (handleNavClickEvent)="handleClickNav($event)"
   ></app-nav>
+  <app-footer *ngIf="windowWidth <= 1056"></app-footer>
+  <router-outlet></router-outlet>
 </div>

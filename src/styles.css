@@ -145,3 +145,58 @@ a:visited {
   color: rgba(var(--fe0, 0, 55, 107), 1);
   text-decoration: none;
 }
+
+app-nav {
+  -webkit-box-ordinal-group: 1;
+  order: 0;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  padding: 0;
+  flex-basis: 55px;
+}
+
+app-home-page {
+  background-color: #fafafa;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+app-profile-page {
+  background-color: #fafafa;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+app-page-not-found {
+  background-color: #fafafa;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+app-footer {
+  -webkit-box-ordinal-group: 6;
+  order: 5;
+  padding: 0 20px;
+  background-color: #fafafa;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+}
