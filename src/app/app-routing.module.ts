@@ -6,19 +6,7 @@ import { ProfilePageComponent } from './components/pages/profile-page/profile-pa
 import { PageNotFoundComponent } from './components/pages/error-page/page-not-found/page-not-found.component';
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'sarojsh01', component: ProfilePageComponent },
-  { path: '_thehasinaaykahs_', component: ProfilePageComponent },
-  { path: 'pooza_singh91', component: ProfilePageComponent },
-  { path: 'bidhan.sthapit', component: ProfilePageComponent },
-  { path: 'elna_stha', component: ProfilePageComponent },
-  { path: 'rebatov', component: ProfilePageComponent },
-  { path: 'ukg_umesh', component: ProfilePageComponent },
-  { path: 'shrinkhala_', component: ProfilePageComponent },
-  { path: 'sandeep_lamichhane25', component: ProfilePageComponent },
-  { path: 'rajeshhamal', component: ProfilePageComponent },
-  { path: 'rabi.lamichhane', component: ProfilePageComponent },
-  { path: 'baburam.bhattarai', component: ProfilePageComponent },
-  { path: 'paraskhadka77', component: ProfilePageComponent },
+  { path: ':user_id', component: ProfilePageComponent },
   { path: 'explore/locations', component: HomePageComponent },
   { path: 'explore/people', component: HomePageComponent },
   { path: 'accounts/edit', component: HomePageComponent },
@@ -32,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/modules/User';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile-page',
@@ -23,10 +24,13 @@ export class ProfilePageComponent implements OnInit {
     posts: [],
   };
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const userId = window.location.pathname.replace('/', '').replace('/', '');
+    let userId;
+    this.route.params.subscribe(params => {
+      userId = params['user_id'];
+    });
 
     this.userService.getUserProfile(userId).subscribe((response) => {
       if (response.length === 1) {
