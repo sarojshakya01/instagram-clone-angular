@@ -13,9 +13,9 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class SuggestionService {
-  private apiUrl: string = 'http://localhost:3001/suggestion';
+  private apiUrl: string = 'http://localhost:3001/api/suggestion/all';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Get suggestions
   getSuggestions(userId: string): Observable<SuggestionResponse[]> {

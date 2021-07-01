@@ -13,29 +13,29 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class PostService {
-  private apiUrl: string = 'http://localhost:3001/';
+  private apiUrl: string = 'http://localhost:3001/api/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Get Posts
   getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.apiUrl}post`);
+    return this.http.get<Post[]>(`${this.apiUrl}post/all`);
   }
 
   // Delete Post
   deletePost(post: Post): Observable<Post> {
-    const url = `${this.apiUrl}post?d=${post.postid}`;
+    const url = `${this.apiUrl}post/delete/${post.postid}`;
     return this.http.delete<Post>(url, httpOptions);
   }
 
   //Add Post
   addPost(post: Post): Observable<Post> {
-    return this.http.post<Post>(`${this.apiUrl}addPost`, post, httpOptions);
+    return this.http.post<Post>(`${this.apiUrl}post/add`, post, httpOptions);
   }
 
   //like post
   likePost(params): Observable<any> {
     const myParams = { params };
-    return this.http.post<any>(`${this.apiUrl}likePost`, myParams, httpOptions);
+    return this.http.post<any>(`${this.apiUrl}post/like`, myParams, httpOptions);
   }
 }

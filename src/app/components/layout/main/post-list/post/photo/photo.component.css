@@ -106,3 +106,7 @@
 .slide-arrow-icon-left {
   background-position: -226px -319px;
 }
+
+.dot-wrapper {
+  flex-direction: row;
+}

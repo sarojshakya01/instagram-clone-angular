@@ -13,12 +13,12 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class UserService {
-  private apiUrl: string = 'http://localhost:3001/userDetails';
+  private apiUrl: string = 'http://localhost:3001/api/user/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Get user profile
   getUserProfile(userId: string): Observable<UserResponse[]> {
-    return this.http.get<UserResponse[]>(`${this.apiUrl}?userId=${userId}`);
+    return this.http.get<UserResponse[]>(`${this.apiUrl}${userId}`);
   }
 }

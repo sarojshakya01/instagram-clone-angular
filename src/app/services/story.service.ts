@@ -13,9 +13,9 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class StoryService {
-  private apiUrl: string = 'http://localhost:3001/story';
+  private apiUrl: string = 'http://localhost:3001/api/story/all';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Get stories
   getStories(): Observable<StoryResponse[]> {

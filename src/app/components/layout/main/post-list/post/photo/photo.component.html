@@ -3,43 +3,43 @@
     class="igpost-image"
     role="button"
     tabIndex="0"
-    (dblclick)="doubleClickPost($event)"
-  >
+    (dblclick)="doubleClickPost($event)">
     <div class="igpost-image-bg">
       <div class="igpost-image-bg-content">
         <img
           alt="Post by {{ postedPhoto.postBy }}"
           src="{{ imgUrl + postedPhoto.photo[photoIndex] }}"
-        />
+          />
       </div>
 
       <div class="igpost-image-footer"></div>
     </div>
     <div
-      *ngIf="postedPhoto.photo.length > 0 && photoIndex > 0"
+      *ngIf="postedPhoto.photo.length> 0 && photoIndex > 0"
       class="slide-arrow slide-arrow-left"
       tabIndex="-1"
       (click)="handlePrevPhoto()"
-    >
+      >
       <div class="slide-arrow-icon slide-arrow-icon-left"></div>
     </div>
     <div
-      *ngIf="
-        postedPhoto.photo.length > 1 &&
-        photoIndex + 1 < postedPhoto.photo.length
-      "
-      class="slide-arrow slide-arrow-right"
-      tabIndex="-1"
-      (click)="handleNextPhoto()"
-    >
-      <div class="slide-arrow-icon slide-arrow-icon-right"></div>
-    </div>
-    <div class="igpost-image-indicator">
-      <div
-        *ngFor="let dot of postedPhoto.photo; let i = index"
-        class="dot {{ i == photoIndex ? 'current' : '' }}"
-      ></div>
-      <div *ngIf="postedPhoto.photo.length === 0" class="blank-dot"></div>
+      *ngIf="postedPhoto.photo.length> 1 &&
+      photoIndex + 1 <postedPhoto.photo.length"class="slide-arrow
+        slide-arrow-right"
+        tabIndex="-1"
+        (click)="handleNextPhoto()">
+        <div class="slide-arrow-icon slide-arrow-icon-right"></div>
+      </div>
+      <div class="igpost-image-indicator">
+        <div *ngIf="postedPhoto.photo.length> 1" class="dot-wrapper">
+          <div
+            *ngFor="let dot of postedPhoto.photo; let i= index"
+            class="dot {{ i == photoIndex ?
+            'current' : '' }}"></div>
+        </div>
+
+
+        <div *ngIf="postedPhoto.photo.length === 1" class="blank-dot"></div>
+      </div>
     </div>
   </div>
-</div>

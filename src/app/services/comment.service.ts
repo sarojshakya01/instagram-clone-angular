@@ -13,9 +13,9 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class CommentService {
-  private apiUrl: string = 'http://localhost:3001/';
+  private apiUrl: string = 'http://localhost:3001/api/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Get Posts
   // getComments(): Observable<Comment[]> {
@@ -26,7 +26,7 @@ export class CommentService {
   deleteComment(params: any): Observable<any> {
     const myParams = { params };
     return this.http.post<any>(
-      `${this.apiUrl}deleteComment`,
+      `${this.apiUrl}comment/delete`,
       myParams,
       httpOptions
     );
@@ -36,7 +36,7 @@ export class CommentService {
   addComent(params: any): Observable<CommentResponse> {
     const myParams = { params };
     return this.http.post<CommentResponse>(
-      `${this.apiUrl}addComment`,
+      `${this.apiUrl}comment/add`,
       myParams,
       httpOptions
     );
@@ -46,7 +46,7 @@ export class CommentService {
   likeComment(params: any): Observable<any> {
     const myParams = { params };
     return this.http.post<any>(
-      `${this.apiUrl}likeComment`,
+      `${this.apiUrl}comment/like`,
       myParams,
       httpOptions
     );

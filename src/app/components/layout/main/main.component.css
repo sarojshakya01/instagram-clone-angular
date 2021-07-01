@@ -81,9 +81,14 @@ app-sidepanel {
   margin-bottom: 30px;
   padding: 0;
   max-width: 293px;
-  right: 0;
   width: 100%;
   margin-left: -4px;
+}
+
+@media (min-width: 640px) {
+  app-sidepanel {
+    right: 280px;
+  }
 }
 
 .main-section-2 .igpost-outer {

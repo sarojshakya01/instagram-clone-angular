@@ -13,9 +13,9 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class SearchService {
-  private apiUrl: string = 'http://localhost:3001/search';
+  private apiUrl: string = 'http://localhost:3001/api/search/user/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Get search suggestion
   getSearchSuggestions(query: string): Observable<SearchResponse[]> {
