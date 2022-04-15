@@ -24,8 +24,8 @@ router.use((req, res, next) => {
   next();
 });
 
-app.listen(process.env.PORT, process.env.HOST, () => {
-  console.log(`Server Running at ${process.env.HOST}:${process.env.PORT}`);
+app.listen(process.env.SERVER_PORT, process.env.HOST, () => {
+  console.log(`Server Running at http://${process.env.HOST}:${process.env.SERVER_PORT}`);
   dbConnectionTest();
   routes(app);
 });

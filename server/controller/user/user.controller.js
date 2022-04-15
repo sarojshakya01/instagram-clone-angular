@@ -60,7 +60,9 @@ module.exports.getUserDetails = (request, response) => {
       useUnifiedTopology: true,
     },
     (err, db) => {
-      if (err) throw err;
+      if (err) {
+        return response.status(500).send({ err: "Error Occured!" });
+      }
 
       let dbobj = db.db("Instagram");
       let userInfo;
@@ -77,7 +79,9 @@ module.exports.getUserDetails = (request, response) => {
           storydate: 0,
         })
         .toArray((err, result) => {
-          if (err) throw err;
+          if (err || !result) {
+            return response.status(500).send({ err: "No data found!" });
+          }
 
           userInfo = result;
 
@@ -96,7 +100,9 @@ module.exports.getUserDetails = (request, response) => {
               posttime: 0,
             })
             .toArray((err, result) => {
-              if (err) throw err;
+              if (err) {
+                return response.status(500).send({ err: "No user found!" });
+              }
               userInfo[0].posts = result;
               response.send(userInfo);
               db.close;
