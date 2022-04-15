@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { SearchResponse } from '../modules/Search';
 import { Observable } from 'rxjs';
+import { API_URL } from 'src/config';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,9 +14,9 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class SearchService {
-  private apiUrl: string = 'http://localhost:3001/api/search/user/';
+  private apiUrl: string = API_URL + 'search/user/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   // Get search suggestion
   getSearchSuggestions(query: string): Observable<SearchResponse[]> {

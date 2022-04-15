@@ -5,7 +5,6 @@
     type="text"
     autoCapitalize="none"
     placeholder="Search"
-    (blur)="handleBlurInput()"
     (keyup)="handleKeyup($event)"
     [value]="searchKey"
   />
@@ -15,7 +14,7 @@
     class="nav-search-clear-icon"
     role="button"
     tabIndex="0"
-    onClick="handleBlurInput()"
+    (click)="clickClearInput($event)"
   ></div>
   <div *ngIf="clickInput && !dataFetched" class="nav-search-loader">
     <img alt="loader" src="/assets/img/loader.gif" />

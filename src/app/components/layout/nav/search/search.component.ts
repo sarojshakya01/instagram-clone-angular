@@ -24,12 +24,6 @@ export class SearchComponent implements OnInit {
     this.dataFetched = true;
   }
 
-  public handleBlurInput() {
-    this.clickInput = false;
-    this.suggestions = [];
-    this.searchKey = '';
-  }
-
   public handleKeyup(e) {
     this.dataFetched = false;
     this.searchKey = e.target.value;
@@ -41,7 +35,7 @@ export class SearchComponent implements OnInit {
         this.suggestions.splice(0, this.suggestions.length);
         for (let i = 0; i < suggestions.length; i++) {
           this.suggestions.push({
-            userId: suggestions[i].useid,
+            userId: suggestions[i].userid,
             userName: suggestions[i].username,
             profilePhoto: suggestions[i].profilephoto,
           });
@@ -49,8 +43,10 @@ export class SearchComponent implements OnInit {
       });
   }
 
-  public clickSuggestion(e) {
-    e.preventDefault();
+  public clickSuggestion(e) {}
+
+  public clickClearInput(e) {
+    this.searchKey = '';
     this.clickInput = false;
     this.suggestions = [];
   }

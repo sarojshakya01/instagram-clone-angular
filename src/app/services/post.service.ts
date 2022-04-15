@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Post } from '../modules/Post';
 import { Observable } from 'rxjs';
+import { API_URL } from 'src/config';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,13 +14,12 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class PostService {
-  private apiUrl: string = 'http://localhost:3001/api/';
 
   constructor(private http: HttpClient) { }
 
   // Get Posts
   getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.apiUrl}post/all`);
+    return this.http.get<Post[]>(`${API_URL}post/all`);
   }
 
   // Delete Post

@@ -1,5 +1,5 @@
 export class SearchResponse {
-  useid: string;
+  userid: string;
   username: string;
   profilephoto: string;
 }

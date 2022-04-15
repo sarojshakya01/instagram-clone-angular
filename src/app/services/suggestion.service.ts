@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { SuggestionResponse } from '../modules/Suggestion';
 import { Observable } from 'rxjs';
+import { API_URL } from 'src/config';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,9 +14,9 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class SuggestionService {
-  private apiUrl: string = 'http://localhost:3001/api/suggestion/all';
+  private apiUrl: string = API_URL + 'suggestion/all';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   // Get suggestions
   getSuggestions(userId: string): Observable<SuggestionResponse[]> {

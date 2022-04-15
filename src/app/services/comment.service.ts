@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Comment, CommentResponse } from '../modules/Comment';
 import { Observable } from 'rxjs';
+import { API_URL } from 'src/config';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,20 +14,18 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class CommentService {
-  private apiUrl: string = 'http://localhost:3001/api/';
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   // Get Posts
   // getComments(): Observable<Comment[]> {
-  //   return this.http.get<Comment[]>(`${this.apiUrl}post`);
+  //   return this.http.get<Comment[]>(`${API_URL}post`);
   // }
 
   // Delete Post
   deleteComment(params: any): Observable<any> {
     const myParams = { params };
     return this.http.post<any>(
-      `${this.apiUrl}comment/delete`,
+      `${API_URL}comment/delete`,
       myParams,
       httpOptions
     );
@@ -36,7 +35,7 @@ export class CommentService {
   addComent(params: any): Observable<CommentResponse> {
     const myParams = { params };
     return this.http.post<CommentResponse>(
-      `${this.apiUrl}comment/add`,
+      `${API_URL}comment/add`,
       myParams,
       httpOptions
     );
@@ -45,10 +44,6 @@ export class CommentService {
   //like post
   likeComment(params: any): Observable<any> {
     const myParams = { params };
-    return this.http.post<any>(
-      `${this.apiUrl}comment/like`,
-      myParams,
-      httpOptions
-    );
+    return this.http.post<any>(`${API_URL}comment/like`, myParams, httpOptions);
   }
 }

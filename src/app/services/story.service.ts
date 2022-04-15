@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { StoryResponse } from '../modules/Story';
 import { Observable } from 'rxjs';
+import { API_URL } from 'src/config';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,9 +14,9 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class StoryService {
-  private apiUrl: string = 'http://localhost:3001/api/story/all';
+  private apiUrl: string = API_URL + 'story/all';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   // Get stories
   getStories(): Observable<StoryResponse[]> {
