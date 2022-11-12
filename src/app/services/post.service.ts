@@ -14,6 +14,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class PostService {
+  apiUrl = API_URL;
 
   constructor(private http: HttpClient) { }
 
